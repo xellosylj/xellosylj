@@ -1,0 +1,39 @@
+创建NamesrvController
+	1.根据启动参数，设置namesrvConfig和nettyServerConfig
+   2.如果参数中有-c，则根据此参数的内容，加载文件，赋值到上2个config. 并设置configStorePath将文件路径记录
+   3.根据启动参数配置namesrvConfig
+   4.实例化NameSrvController(namesrvConfig, nettyServerConfig)
+     过程中，将namesrvConfig和nettyServerConfig的属性放入到Configuration中
+	5.将中文件中读到的属性放入到Configuration中
+
+启动controller
+  1.初始化controller -> initialize()
+     1: 调用kvConfigManager.load ，从namesrvConfig配置的kvConfigPath作为文件路径(默认是userhome/namesrv/kvConfig.json),将从文件中解析出来的json字             符串转换放入到configTable中
+	  2: 创建remotingServer = new NettyRemotingServer(this.nettyServerConfig, this.brokerHousekeepingService);
+     3: 创建线程池remotingExecutor
+     4: 给remotingServer注册默认请求处理器defaultRequestProcessor = new Pair<NettyRequestProcessor, ExecutorService>(processor, executor);
+     5: 周期任务，扫描不活动的broker -> broker超时，关闭对应的channel，遍历RouteInfoManager的5个map，一层层删除对应的信息
+     6: 周期任务，打印kvConfigManager的configtable信息
+     7: 如果tsl模式不是disable，监控对应的文件信息
+   2.启动controller -> start
+     1: 启动remotingServer
+        a.创建一个eventloop -> defaultEventExecutorGroup 作为新建子连接的group
+        b.配置serverBootStrap,主要有5个handler
+          HandshakeHandler -> 如果是tsl模式，加入tsl对应的hanlder
+          NettyEncoder -> 编码器，将command转换为bytebuf
+          NettyDecoder -> 解码器，将bytebuf转换为command
+		IdleStateHandler -> 初始化的时候根据入参开启定时器，发送是否空闲的事件到pipeline(默认开启All模式，时间间隔默认120，为nettyServerConfig的serverChannelMaxIdleTimeSeconds属性)
+		NettyConnectManageHandler -> 如果是active,inactive,idleEvent,exception事件，将事件封装为NettyEvent放入到nettyEventExecutor中(看下面d)
+		NettyServerHandler -> 最重要的handler，所有的逻辑都在这里 ->  processMessageReceived
+            根据commond的type类型
+            请求：processRequestCommand
+               从processrTable中取出对应的NettyRequestProcessor, ExecutorService,如果为空，使用默认的NettyRequestProcessor, ExecutorService
+               创建一个任务，如果有rpchook，调用其dobeforeRequest和doAfterResponse.  通过NettyRequestProcessor处理请求并返回响应，如果不是onewayRpc模式，将响应写出到pipeline  NettyRequestProcessor负责请求解析和repsonse封装，所有的逻辑都在RouteInfoManager
+               判断NettyRequestProcessor是否拒绝，如果拒绝，返回sys busy
+               使用ExecutorService提交任务
+            响应：processResponseCommand
+              从repsonsetable中取出command对应的ResponseFuture，如果不为空，为repsonsetable中移除，将commond放入到ResponseFuture，如果ResponseFuture有回调函数，执行其回调函数，然后释放资源(countdownLatch和semaphore)                 
+        c.启动serverBootStrap -> bind().sync()
+        d.启动nettyEventExecutor,从eventQueue中取出事件，调用listener处理事件,listener为BrokerHousekeepingService对象，所有事件都委托给controller的routeInfoManage来处理 (就是处理将remoteAddr从routeInfoManage中的5个map中一层层删除，和1.5一样)
+        e.启动一个周期任务扫描responseTable,任务超时(可以认为是到了处理时间)调用其回调函数
+     2: 启动fileWatchService(tsl不为空),监控文件是否变化
