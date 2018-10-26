@@ -1,0 +1,37 @@
+{\rtf1\fbidis\ansi\ansicpg0\uc1\deff0\deflang0\deflangfe0{\fonttbl{\f0\fnil \'cb\'ce\'cc\'e5;}{\f1\fnil\fcharset134 \'cb\'ce\'cc\'e5;}{\f2\fnil Consolas;}}{\colortbl;\red0\green0\blue255;\red0\green0\blue0;\red255\green0\blue0;\red255\green255\blue255;}
+
+
+\pard\sl360\slmult1\fi0\li0\qc\ri0\sb0\sa0\itap0 \plain \f1\b\lang2052\fs24\cf2 ServerBootstrap
+\par \pard\sl360\slmult1\fi0\li0\ql\ri0\sb0\sa0\itap0 
+\par \plain \f1\lang2052\fs21\cf2 group()
+\par group = \plain \f2\fs20\cf2 NioEventLoopGroup;
+\par childgroup = NioEventLoopGroup;
+\par 
+\par channel()  -> channelFactory()
+\par channle.class -> BootstrapChannelFactory(channle.class)  \plain \f2\fs20\cf3 ---AbstractBootStrap\uc2\u20869 \'c4\'da\u37096 \'b2\'bf\u31867 \'c0\'e0\uc1
+\par \plain \f2\fs20\cf2 channelFactory = BootstrapChannelFactory(channle.class)
+\par 
+\par doBind(address)
+\par 
+\par initAndRegister()
+\par   \plain \f2\fs20\cf3   --\uc2\u23454 \'ca\'b5\u20363 \'c0\'fd\u21270 \'bb\'afchannel\uc1
+\par \plain \f2\fs20\cf2     channelFactory().newChannel()
+\par     init(channel)
+\par  \tab 1.\uc2\u26681 \'b8\'f9\u25454 \'be\'ddoptions\u23545 \'b6\'d4socket\u36827 \'bd\'f8\u34892 \'d0\'d0\u37197 \'c5\'e4\u32622 \'d6\'c3\uc1
+\par        2.\uc2\u26681 \'b8\'f9\u25454 \'be\'ddattr\u23545 \'b6\'d4channel\u36827 \'bd\'f8\u34892 \'d0\'d0\u37197 \'c5\'e4\u32622 \'d6\'c3\uc1
+\par \pard\sl360\slmult1\fi420\li0\ql\ri0\sb0\sa0\itap0 \tab 3.\uc2\u23558 \'bd\'abhandler\u21152 \'bc\'d3\u20837 \'c8\'eb\u21040 \'b5\'bdpipeline\uc1
+\par    4.\uc2\u37197 \'c5\'e4\u32622 \'d6\'c3\u19968 \'d2\'bb\u20123 \'d0\'a9\u23646 \'ca\'f4\u24615 \'d0\'d4\uc1\plain \f2\fs20\cf-1 currentChildGroup\uc2\u65292 \'a3\'accurrentChildHandler\u65292 \'a3\'accurrentChildOptionscurrentChildAttrs\uc1
+\par    5.\uc2\u23558 \'bd\'ab\u21311 \'c4\'e4\u21517 \'c3\'fbhandle\u21152 \'bc\'d3\u20837 \'c8\'eb\u21040 \'b5\'bdpipeline\u65292 \'a3\'acServerBootstrapAcceptor,\u22914 \'c8\'e7\u26524 \'b9\'fb\u26377 \'d3\'d0\u26032 \'d0\'c2\u30340 \'b5\'c4channelRead\u20107 \'ca\'c2\u20214 \'bc\'fe\u65292 \'a3\'ac\u37197 \'c5\'e4\u32622 \'d6\'c3\u23376 \'d7\'d3channel\uc1
+\par \uc2\u23558 \'bd\'abchannel\u27880 \'d7\'a2\u20876 \'b2\'e1\u21040 \'b5\'bdgroup\uc1
+\par \uc2\u20174 \'b4\'d3NioEventLoopGroup\u20013 \'d6\'d0\u21462 \'c8\'a1\u19968 \'d2\'bb\u20010 \'b8\'f6NioEventLoop\u65292 \'a3\'ac\u36890 \'cd\'a8\u36807 \'b9\'fdchannel\u30340 \'b5\'c4unsafe\u21464 \'b1\'e4\u37327 \'c1\'bf\uc1\plain \f2\fs20\cf3 \uc2\u65288 \'a3\'a8\u29238 \'b8\'b8\u31867 \'c0\'e0AbstractUnsafe\u30340 \'b5\'c4\u20869 \'c4\'da\u37096 \'b2\'bf\u31867 \'c0\'e0\u65289 \'a3\'a9\uc1\plain \f2\fs20\cf-1 \uc2\u27880 \'d7\'a2\u20876 \'b2\'e1\uc1
+\par     1.eventloop = NioEventLoop;
+\par \tab  2.\uc2\u22914 \'c8\'e7\u26524 \'b9\'fb\u26412 \'b1\'beeventloop\u30340 \'b5\'c4\u32447 \'cf\'df\u31243 \'b3\'cc\u20026 \'ce\'aa\u24403 \'b5\'b1\u21069 \'c7\'b0\u32447 \'cf\'df\u31243 \'b3\'cc\u65292 \'a3\'acregister0(promise),  promise = DefaultChannelPromise;\uc1
+\par       \uc2\u22914 \'c8\'e7\u26524 \'b9\'fb\u19981 \'b2\'bb\u26159 \'ca\'c7\u65292 \'a3\'ac\u23558 \'bd\'abregister0(promise)\u20219 \'c8\'ce\u21153 \'ce\'f1\u23558 \'bd\'ab\u20837 \'c8\'eb\u21040 \'b5\'bdeventloop\u30340 \'b5\'c4taskQueue\u20013 \'d6\'d0\u21435 \'c8\'a5\u24182 \'b2\'a2\u21551 \'c6\'f4\u21160 \'b6\'af\u32447 \'cf\'df\u31243 \'b3\'cc\uc1
+\par     3.register0 -> 
+\par       channel.register(WindowsSelectorImpl,0,this)  ->  \uc2\u22312 \'d4\'daServerSocketChannelImpl\u27880 \'d7\'a2\u20876 \'b2\'e1\u65292 \'a3\'ac\u35843 \'b5\'f7\u29992 \'d3\'c3java.nio\u23454 \'ca\'b5\u29616 \'cf\'d6\u65292 \'a3\'ac\u20027 \'d6\'f7\u35201 \'d2\'aa\u26159 \'ca\'c7selectkey.interestOps\uc1
+\par       \uc2\u22312 \'d4\'dapipeline\u35302 \'b4\'a5\u21457 \'b7\'a2fireChannelRegistered\u20107 \'ca\'c2\u20214 \'bc\'fe\u21644 \'ba\'cdfireChannelActive\u20107 \'ca\'c2\u20214 \'bc\'fe\u65292 \'a3\'acfireChannelActive\u21482 \'d6\'bb\u35302 \'b4\'a5\u21457 \'b7\'a2\u19968 \'d2\'bb\u27425 \'b4\'ce\u65292 \'a3\'ac\u20877 \'d4\'d9\u27425 \'b4\'ce\u27880 \'d7\'a2\u20876 \'b2\'e1\u19981 \'b2\'bb\u20250 \'bb\'e1\u35302 \'b4\'a5\u21457 \'b7\'a2\uc1
+\par \pard\sl360\slmult1\fi0\li0\ql\ri0\sb0\sa0\itap0 doBind0() ->
+\par      \uc2\u35843 \'b5\'f7\u29992 \'d3\'c3ServerSocketChannelImpl\u30340 \'b5\'c4bind\u26041 \'b7\'bd\u27861 \'b7\'a8\u65292 \'a3\'ac\u32465 \'b0\'f3\u23450 \'b6\'a8\u21040 \'b5\'bd\u31471 \'b6\'cb\u21475 \'bf\'da\uc1
+\par 
+\par sync -> \uc2\u35843 \'b5\'f7\u29992 \'d3\'c3DefaultChannelPromisi \u29238 \'b8\'b8\u31867 \'c0\'e0 DefaultPromise \u30340 \'b5\'c4sync\u26041 \'b7\'bd\u27861 \'b7\'a8\uc1
+\par     1.\par}

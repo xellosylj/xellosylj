@@ -1,0 +1,302 @@
+{\rtf1\fbidis\ansi\ansicpg0\uc1\deff0\deflang0\deflangfe0{\fonttbl{\f0\fnil \'cb\'ce\'cc\'e5;}{\f1\fnil Times New Roman;}{\f2\fnil\fcharset134 \'cb\'ce\'cc\'e5;}}{\colortbl;\red0\green0\blue255;\red255\green0\blue0;\red0\green0\blue0;\red255\green255\blue255;}
+
+
+\pard\fi0\li0\qc\ri0\sb0\sa0\itap0 \plain \f2\b\lang2052\fs24\cf3 log4j
+\par \pard\fi0\li0\ql\ri0\sb0\sa0\itap0 
+\par \plain \f1\fs24 log4j.properties \uc2\u20351 \'ca\'b9\u29992 \'d3\'c3\uc1
+\par \uc2\u19968 \'d2\'bb.\u21442 \'b2\'ce\u25968 \'ca\'fd\u24847 \'d2\'e2\u20041 \'d2\'e5\u35828 \'cb\'b5\u26126 \'c3\'f7\uc1
+\par 
+\par \plain \f1\fs24\cf2 \uc2\u36755 \'ca\'e4\u20986 \'b3\'f6\u32423 \'bc\'b6\u21035 \'b1\'f0\u30340 \'b5\'c4\u31181 \'d6\'d6\u31867 \'c0\'e0\uc1
+\par \plain \f1\fs24 ERROR\uc2\u12289 \'a1\'a2WARN\u12289 \'a1\'a2INFO\u12289 \'a1\'a2DEBUG\uc1
+\par ERROR \uc2\u20026 \'ce\'aa\u20005 \'d1\'cf\u37325 \'d6\'d8\u38169 \'b4\'ed\u35823 \'ce\'f3 \u20027 \'d6\'f7\u35201 \'d2\'aa\u26159 \'ca\'c7\u31243 \'b3\'cc\u24207 \'d0\'f2\u30340 \'b5\'c4\u38169 \'b4\'ed\u35823 \'ce\'f3\uc1
+\par WARN \uc2\u20026 \'ce\'aa\u19968 \'d2\'bb\u33324 \'b0\'e3\u35686 \'be\'af\u21578 \'b8\'e6\u65292 \'a3\'ac\u27604 \'b1\'c8\u22914 \'c8\'e7session\u20002 \'b6\'aa\u22833 \'ca\'a7\uc1
+\par INFO \uc2\u20026 \'ce\'aa\u19968 \'d2\'bb\u33324 \'b0\'e3\u35201 \'d2\'aa\u26174 \'cf\'d4\u31034 \'ca\'be\u30340 \'b5\'c4\u20449 \'d0\'c5\u24687 \'cf\'a2\u65292 \'a3\'ac\u27604 \'b1\'c8\u22914 \'c8\'e7\u30331 \'b5\'c7\u24405 \'c2\'bc\u30331 \'b5\'c7\u20986 \'b3\'f6\uc1
+\par DEBUG \uc2\u20026 \'ce\'aa\u31243 \'b3\'cc\u24207 \'d0\'f2\u30340 \'b5\'c4\u35843 \'b5\'f7\u35797 \'ca\'d4\u20449 \'d0\'c5\u24687 \'cf\'a2\uc1
+\par \plain \f1\fs24\cf2 
+\par \uc2\u37197 \'c5\'e4\u32622 \'d6\'c3\u26085 \'c8\'d5\u24535 \'d6\'be\u20449 \'d0\'c5\u24687 \'cf\'a2\u36755 \'ca\'e4\u20986 \'b3\'f6\u30446 \'c4\'bf\u30340 \'b5\'c4\u22320 \'b5\'d8\uc1
+\par \plain \f1\fs24 log4j.appender.appenderName = fully.qualified.name.of.appender.class
+\par 1.org.apache.log4j.ConsoleAppender\uc2\u65288 \'a3\'a8\u25511 \'bf\'d8\u21046 \'d6\'c6\u21488 \'cc\'a8\u65289 \'a3\'a9\uc1
+\par 2.org.apache.log4j.FileAppender\uc2\u65288 \'a3\'a8\u25991 \'ce\'c4\u20214 \'bc\'fe\u65289 \'a3\'a9\uc1
+\par 3.org.apache.log4j.DailyRollingFileAppender\uc2\u65288 \'a3\'a8\u27599 \'c3\'bf\u22825 \'cc\'ec\u20135 \'b2\'fa\u29983 \'c9\'fa\u19968 \'d2\'bb\u20010 \'b8\'f6\u26085 \'c8\'d5\u24535 \'d6\'be\u25991 \'ce\'c4\u20214 \'bc\'fe\u65289 \'a3\'a9\uc1
+\par 4.org.apache.log4j.RollingFileAppender\uc2\u65288 \'a3\'a8\u25991 \'ce\'c4\u20214 \'bc\'fe\u22823 \'b4\'f3\u23567 \'d0\'a1\u21040 \'b5\'bd\u36798 \'b4\'ef\u25351 \'d6\'b8\u23450 \'b6\'a8\u23610 \'b3\'df\u23544 \'b4\'e7\u30340 \'b5\'c4\u26102 \'ca\'b1\u20505 \'ba\'f2\u20135 \'b2\'fa\u29983 \'c9\'fa\u19968 \'d2\'bb\u20010 \'b8\'f6\u26032 \'d0\'c2\u30340 \'b5\'c4\u25991 \'ce\'c4\u20214 \'bc\'fe\u65289 \'a3\'a9\uc1
+\par 5.org.apache.log4j.WriterAppender\uc2\u65288 \'a3\'a8\u23558 \'bd\'ab\u26085 \'c8\'d5\u24535 \'d6\'be\u20449 \'d0\'c5\u24687 \'cf\'a2\u20197 \'d2\'d4\u27969 \'c1\'f7\u26684 \'b8\'f1\u24335 \'ca\'bd\u21457 \'b7\'a2\u36865 \'cb\'cd\u21040 \'b5\'bd\u20219 \'c8\'ce\u24847 \'d2\'e2\u25351 \'d6\'b8\u23450 \'b6\'a8\u30340 \'b5\'c4\u22320 \'b5\'d8\u26041 \'b7\'bd\u65289 \'a3\'a9\uc1
+\par 
+\par \plain \f1\fs24\cf2 \uc2\u37197 \'c5\'e4\u32622 \'d6\'c3\u26085 \'c8\'d5\u24535 \'d6\'be\u20449 \'d0\'c5\u24687 \'cf\'a2\u30340 \'b5\'c4\u26684 \'b8\'f1\u24335 \'ca\'bd\uc1
+\par \plain \f1\fs24 log4j.appender.appenderName.layout = fully.qualified.name.of.layout.class
+\par 1.org.apache.log4j.HTMLLayout\uc2\u65288 \'a3\'a8\u20197 \'d2\'d4HTML\u34920 \'b1\'ed\u26684 \'b8\'f1\u24418 \'d0\'ce\u24335 \'ca\'bd\u24067 \'b2\'bc\u23616 \'be\'d6\u65289 \'a3\'a9\u65292 \'a3\'ac\uc1
+\par 2.org.apache.log4j.PatternLayout\uc2\u65288 \'a3\'a8\u21487 \'bf\'c9\u20197 \'d2\'d4\u28789 \'c1\'e9\u27963 \'bb\'ee\u22320 \'b5\'d8\u25351 \'d6\'b8\u23450 \'b6\'a8\u24067 \'b2\'bc\u23616 \'be\'d6\u27169 \'c4\'a3\u24335 \'ca\'bd\u65289 \'a3\'a9\u65292 \'a3\'ac\uc1
+\par 3.org.apache.log4j.SimpleLayout\uc2\u65288 \'a3\'a8\u21253 \'b0\'fc\u21547 \'ba\'ac\u26085 \'c8\'d5\u24535 \'d6\'be\u20449 \'d0\'c5\u24687 \'cf\'a2\u30340 \'b5\'c4\u32423 \'bc\'b6\u21035 \'b1\'f0\u21644 \'ba\'cd\u20449 \'d0\'c5\u24687 \'cf\'a2\u23383 \'d7\'d6\u31526 \'b7\'fb\u20018 \'b4\'ae\u65289 \'a3\'a9\u65292 \'a3\'ac\uc1
+\par 4.org.apache.log4j.TTCCLayout\uc2\u65288 \'a3\'a8\u21253 \'b0\'fc\u21547 \'ba\'ac\u26085 \'c8\'d5\u24535 \'d6\'be\u20135 \'b2\'fa\u29983 \'c9\'fa\u30340 \'b5\'c4\u26102 \'ca\'b1\u38388 \'bc\'e4\u12289 \'a1\'a2\u32447 \'cf\'df\u31243 \'b3\'cc\u12289 \'a1\'a2\u31867 \'c0\'e0\u21035 \'b1\'f0\u31561 \'b5\'c8\u31561 \'b5\'c8\u20449 \'d0\'c5\u24687 \'cf\'a2\u65289 \'a3\'a9\uc1
+\par 
+\par \plain \f1\fs24\cf2 \uc2\u25511 \'bf\'d8\u21046 \'d6\'c6\u21488 \'cc\'a8\u36873 \'d1\'a1\u39033 \'cf\'ee\uc1
+\par \plain \f1\fs24 Threshold=DEBUG:\uc2\u25351 \'d6\'b8\u23450 \'b6\'a8\u26085 \'c8\'d5\u24535 \'d6\'be\u28040 \'cf\'fb\u24687 \'cf\'a2\u30340 \'b5\'c4\u36755 \'ca\'e4\u20986 \'b3\'f6\u26368 \'d7\'ee\u20302 \'b5\'cd\u23618 \'b2\'e3\u27425 \'b4\'ce\u12290 \'a1\'a3\uc1
+\par ImmediateFlush=true:\uc2\u40664 \'c4\'ac\u35748 \'c8\'cf\u20540 \'d6\'b5\u26159 \'ca\'c7true,\u24847 \'d2\'e2\u35859 \'ce\'bd\u30528 \'d7\'c5\u25152 \'cb\'f9\u26377 \'d3\'d0\u30340 \'b5\'c4\u28040 \'cf\'fb\u24687 \'cf\'a2\u37117 \'b6\'bc\u20250 \'bb\'e1\u34987 \'b1\'bb\u31435 \'c1\'a2\u21363 \'bc\'b4\u36755 \'ca\'e4\u20986 \'b3\'f6\u12290 \'a1\'a3\uc1
+\par Target=System.err\uc2\u65306 \'a3\'ba\u40664 \'c4\'ac\u35748 \'c8\'cf\u24773 \'c7\'e9\u20917 \'bf\'f6\u19979 \'cf\'c2\u26159 \'ca\'c7\u65306 \'a3\'baSystem.out,\u25351 \'d6\'b8\u23450 \'b6\'a8\u36755 \'ca\'e4\u20986 \'b3\'f6\u25511 \'bf\'d8\u21046 \'d6\'c6\u21488 \'cc\'a8\uc1
+\par 
+\par \plain \f1\fs24\cf2 FileAppender \uc2\u36873 \'d1\'a1\u39033 \'cf\'ee\uc1
+\par \plain \f1\fs24 Threshold=DEBUF:\uc2\u25351 \'d6\'b8\u23450 \'b6\'a8\u26085 \'c8\'d5\u24535 \'d6\'be\u28040 \'cf\'fb\u24687 \'cf\'a2\u30340 \'b5\'c4\u36755 \'ca\'e4\u20986 \'b3\'f6\u26368 \'d7\'ee\u20302 \'b5\'cd\u23618 \'b2\'e3\u27425 \'b4\'ce\u12290 \'a1\'a3\uc1
+\par ImmediateFlush=true:\uc2\u40664 \'c4\'ac\u35748 \'c8\'cf\u20540 \'d6\'b5\u26159 \'ca\'c7true,\u24847 \'d2\'e2\u35859 \'ce\'bd\u30528 \'d7\'c5\u25152 \'cb\'f9\u26377 \'d3\'d0\u30340 \'b5\'c4\u28040 \'cf\'fb\u24687 \'cf\'a2\u37117 \'b6\'bc\u20250 \'bb\'e1\u34987 \'b1\'bb\u31435 \'c1\'a2\u21363 \'bc\'b4\u36755 \'ca\'e4\u20986 \'b3\'f6\u12290 \'a1\'a3\uc1
+\par File=mylog.txt:\uc2\u25351 \'d6\'b8\u23450 \'b6\'a8\u28040 \'cf\'fb\u24687 \'cf\'a2\u36755 \'ca\'e4\u20986 \'b3\'f6\u21040 \'b5\'bdmylog.txt\u25991 \'ce\'c4\u20214 \'bc\'fe\u12290 \'a1\'a3\uc1
+\par Append=false:\uc2\u40664 \'c4\'ac\u35748 \'c8\'cf\u20540 \'d6\'b5\u26159 \'ca\'c7true,\u21363 \'bc\'b4\u23558 \'bd\'ab\u28040 \'cf\'fb\u24687 \'cf\'a2\u22686 \'d4\'f6\u21152 \'bc\'d3\u21040 \'b5\'bd\u25351 \'d6\'b8\u23450 \'b6\'a8\u25991 \'ce\'c4\u20214 \'bc\'fe\u20013 \'d6\'d0\u65292 \'a3\'acfalse\u25351 \'d6\'b8\u23558 \'bd\'ab\u28040 \'cf\'fb\u24687 \'cf\'a2\u35206 \'b8\'b2\u30422 \'b8\'c7\u25351 \'d6\'b8\u23450 \'b6\'a8\u30340 \'b5\'c4\u25991 \'ce\'c4\u20214 \'bc\'fe\u20869 \'c4\'da\u23481 \'c8\'dd\u12290 \'a1\'a3\uc1
+\par \plain \f1\fs24\cf2 
+\par RollingFileAppender \uc2\u36873 \'d1\'a1\u39033 \'cf\'ee\uc1
+\par \plain \f1\fs24 Threshold=DEBUG:\uc2\u25351 \'d6\'b8\u23450 \'b6\'a8\u26085 \'c8\'d5\u24535 \'d6\'be\u28040 \'cf\'fb\u24687 \'cf\'a2\u30340 \'b5\'c4\u36755 \'ca\'e4\u20986 \'b3\'f6\u26368 \'d7\'ee\u20302 \'b5\'cd\u23618 \'b2\'e3\u27425 \'b4\'ce\u12290 \'a1\'a3\uc1
+\par ImmediateFlush=true:\uc2\u40664 \'c4\'ac\u35748 \'c8\'cf\u20540 \'d6\'b5\u26159 \'ca\'c7true,\u24847 \'d2\'e2\u35859 \'ce\'bd\u30528 \'d7\'c5\u25152 \'cb\'f9\u26377 \'d3\'d0\u30340 \'b5\'c4\u28040 \'cf\'fb\u24687 \'cf\'a2\u37117 \'b6\'bc\u20250 \'bb\'e1\u34987 \'b1\'bb\u31435 \'c1\'a2\u21363 \'bc\'b4\u36755 \'ca\'e4\u20986 \'b3\'f6\u12290 \'a1\'a3\uc1
+\par File=mylog.txt:\uc2\u25351 \'d6\'b8\u23450 \'b6\'a8\u28040 \'cf\'fb\u24687 \'cf\'a2\u36755 \'ca\'e4\u20986 \'b3\'f6\u21040 \'b5\'bdmylog.txt\u25991 \'ce\'c4\u20214 \'bc\'fe\u12290 \'a1\'a3\uc1
+\par Append=false:\uc2\u40664 \'c4\'ac\u35748 \'c8\'cf\u20540 \'d6\'b5\u26159 \'ca\'c7true,\u21363 \'bc\'b4\u23558 \'bd\'ab\u28040 \'cf\'fb\u24687 \'cf\'a2\u22686 \'d4\'f6\u21152 \'bc\'d3\u21040 \'b5\'bd\u25351 \'d6\'b8\u23450 \'b6\'a8\u25991 \'ce\'c4\u20214 \'bc\'fe\u20013 \'d6\'d0\u65292 \'a3\'acfalse\u25351 \'d6\'b8\u23558 \'bd\'ab\u28040 \'cf\'fb\u24687 \'cf\'a2\u35206 \'b8\'b2\u30422 \'b8\'c7\u25351 \'d6\'b8\u23450 \'b6\'a8\u30340 \'b5\'c4\u25991 \'ce\'c4\u20214 \'bc\'fe\u20869 \'c4\'da\u23481 \'c8\'dd\u12290 \'a1\'a3\uc1
+\par MaxFileSize=100KB: \uc2\u21518 \'ba\'f3\u32512 \'d7\'ba\u21487 \'bf\'c9\u20197 \'d2\'d4\u26159 \'ca\'c7KB, MB \u25110 \'bb\'f2\u32773 \'d5\'df\u26159 \'ca\'c7 GB. \u22312 \'d4\'da\u26085 \'c8\'d5\u24535 \'d6\'be\u25991 \'ce\'c4\u20214 \'bc\'fe\u21040 \'b5\'bd\u36798 \'b4\'ef\u35813 \'b8\'c3\u22823 \'b4\'f3\u23567 \'d0\'a1\u26102 \'ca\'b1\u65292 \'a3\'ac\u23558 \'bd\'ab\u20250 \'bb\'e1\u33258 \'d7\'d4\u21160 \'b6\'af\u28378 \'b9\'f6\u21160 \'b6\'af\u65292 \'a3\'ac\u21363 \'bc\'b4\u23558 \'bd\'ab\u21407 \'d4\'ad\u26469 \'c0\'b4\u30340 \'b5\'c4\u20869 \'c4\'da\u23481 \'c8\'dd\u31227 \'d2\'c6\u21040 \'b5\'bdmylog.log.1\u25991 \'ce\'c4\u20214 \'bc\'fe\u12290 \'a1\'a3\uc1
+\par MaxBackupIndex=2:\uc2\u25351 \'d6\'b8\u23450 \'b6\'a8\u21487 \'bf\'c9\u20197 \'d2\'d4\u20135 \'b2\'fa\u29983 \'c9\'fa\u30340 \'b5\'c4\u28378 \'b9\'f6\u21160 \'b6\'af\u25991 \'ce\'c4\u20214 \'bc\'fe\u30340 \'b5\'c4\u26368 \'d7\'ee\u22823 \'b4\'f3\u25968 \'ca\'fd\u12290 \'a1\'a3\uc1
+\par 
+\par log4j.appender.A1.layout.ConversionPattern=%-4r %-5p %d\{yyyy-MM-dd HH:mm:ssS\} %c %m%n
+\par \plain \f1\fs24\cf2 \uc2\u26085 \'c8\'d5\u24535 \'d6\'be\u20449 \'d0\'c5\u24687 \'cf\'a2\u26684 \'b8\'f1\u24335 \'ca\'bd\u20013 \'d6\'d0\u20960 \'bc\'b8\u20010 \'b8\'f6\u31526 \'b7\'fb\u21495 \'ba\'c5\u25152 \'cb\'f9\u20195 \'b4\'fa\u34920 \'b1\'ed\u30340 \'b5\'c4\u21547 \'ba\'ac\u20041 \'d2\'e5\u65306 \'a3\'ba\uc1
+\par \plain \f1\fs24 \~-X\uc2\u21495 \'ba\'c5: X\u20449 \'d0\'c5\u24687 \'cf\'a2\u36755 \'ca\'e4\u20986 \'b3\'f6\u26102 \'ca\'b1\u24038 \'d7\'f3\u23545 \'b6\'d4\u40784 \'c6\'eb\u65307 \'a3\'bb\uc1
+\par \~%p: \uc2\u36755 \'ca\'e4\u20986 \'b3\'f6\u26085 \'c8\'d5\u24535 \'d6\'be\u20449 \'d0\'c5\u24687 \'cf\'a2\u20248 \'d3\'c5\u20808 \'cf\'c8\u32423 \'bc\'b6\u65292 \'a3\'ac\u21363 \'bc\'b4DEBUG\u65292 \'a3\'acINFO\u65292 \'a3\'acWARN\u65292 \'a3\'acERROR\u65292 \'a3\'acFATAL,\uc1
+\par \~%d: \uc2\u36755 \'ca\'e4\u20986 \'b3\'f6\u26085 \'c8\'d5\u24535 \'d6\'be\u26102 \'ca\'b1\u38388 \'bc\'e4\u28857 \'b5\'e3\u30340 \'b5\'c4\u26085 \'c8\'d5\u26399 \'c6\'da\u25110 \'bb\'f2\u26102 \'ca\'b1\u38388 \'bc\'e4\u65292 \'a3\'ac\u40664 \'c4\'ac\u35748 \'c8\'cf\u26684 \'b8\'f1\u24335 \'ca\'bd\u20026 \'ce\'aaISO8601\u65292 \'a3\'ac\u20063 \'d2\'b2\u21487 \'bf\'c9\u20197 \'d2\'d4\u22312 \'d4\'da\u20854 \'c6\'e4\u21518 \'ba\'f3\u25351 \'d6\'b8\u23450 \'b6\'a8\u26684 \'b8\'f1\u24335 \'ca\'bd\u65292 \'a3\'ac\u27604 \'b1\'c8\u22914 \'c8\'e7\u65306 \'a3\'ba%d\{yyy MMM dd HH:mm:ss,SSS\}\u65292 \'a3\'ac\u36755 \'ca\'e4\u20986 \'b3\'f6\u31867 \'c0\'e0\u20284 \'cb\'c6\u65306 \'a3\'ba2002\u24180 \'c4\'ea10\u26376 \'d4\'c218\u26085 \'c8\'d5 22\u65306 \'a3\'ba10\u65306 \'a3\'ba28\u65292 \'a3\'ac921\uc1
+\par \~%r: \uc2\u36755 \'ca\'e4\u20986 \'b3\'f6\u33258 \'d7\'d4\u24212 \'d3\'a6\u29992 \'d3\'c3\u21551 \'c6\'f4\u21160 \'b6\'af\u21040 \'b5\'bd\u36755 \'ca\'e4\u20986 \'b3\'f6\u35813 \'b8\'c3log\u20449 \'d0\'c5\u24687 \'cf\'a2\u32791 \'ba\'c4\u36153 \'b7\'d1\u30340 \'b5\'c4\u27627 \'ba\'c1\u31186 \'c3\'eb\u25968 \'ca\'fd\uc1
+\par \~%c: \uc2\u36755 \'ca\'e4\u20986 \'b3\'f6\u26085 \'c8\'d5\u24535 \'d6\'be\u20449 \'d0\'c5\u24687 \'cf\'a2\u25152 \'cb\'f9\u23646 \'ca\'f4\u30340 \'b5\'c4\u31867 \'c0\'e0\u30446 \'c4\'bf\u65292 \'a3\'ac\u36890 \'cd\'a8\u24120 \'b3\'a3\u23601 \'be\'cd\u26159 \'ca\'c7\u25152 \'cb\'f9\u22312 \'d4\'da\u31867 \'c0\'e0\u30340 \'b5\'c4\u20840 \'c8\'ab\u21517 \'c3\'fb\uc1
+\par \~%t: \uc2\u36755 \'ca\'e4\u20986 \'b3\'f6\u20135 \'b2\'fa\u29983 \'c9\'fa\u35813 \'b8\'c3\u26085 \'c8\'d5\u24535 \'d6\'be\u20107 \'ca\'c2\u20214 \'bc\'fe\u30340 \'b5\'c4\u32447 \'cf\'df\u31243 \'b3\'cc\u21517 \'c3\'fb\uc1
+\par \~%l: \uc2\u36755 \'ca\'e4\u20986 \'b3\'f6\u26085 \'c8\'d5\u24535 \'d6\'be\u20107 \'ca\'c2\u20214 \'bc\'fe\u30340 \'b5\'c4\u21457 \'b7\'a2\u29983 \'c9\'fa\u20301 \'ce\'bb\u32622 \'d6\'c3\u65292 \'a3\'ac\u30456 \'cf\'e0\u24403 \'b5\'b1\u20110 \'d3\'da%C.%M(%F:%L)\u30340 \'b5\'c4\u32452 \'d7\'e9\u21512 \'ba\'cf,\u21253 \'b0\'fc\u25324 \'c0\'a8\u31867 \'c0\'e0\u30446 \'c4\'bf\u21517 \'c3\'fb\u12289 \'a1\'a2\u21457 \'b7\'a2\u29983 \'c9\'fa\u30340 \'b5\'c4\u32447 \'cf\'df\u31243 \'b3\'cc\u65292 \'a3\'ac\u20197 \'d2\'d4\u21450 \'bc\'b0\u22312 \'d4\'da\u20195 \'b4\'fa\u30721 \'c2\'eb\u20013 \'d6\'d0\u30340 \'b5\'c4\u34892 \'d0\'d0\u25968 \'ca\'fd\u12290 \'a1\'a3\u20030 \'be\'d9\u20363 \'c0\'fd\u65306 \'a3\'baTestlog4.main (TestLog4.java:10)\uc1
+\par \~%x: \uc2\u36755 \'ca\'e4\u20986 \'b3\'f6\u21644 \'ba\'cd\u24403 \'b5\'b1\u21069 \'c7\'b0\u32447 \'cf\'df\u31243 \'b3\'cc\u30456 \'cf\'e0\u20851 \'b9\'d8\u32852 \'c1\'aa\u30340 \'b5\'c4NDC(\u23884 \'c7\'b6\u22871 \'cc\'d7\u35786 \'d5\'ef\u26029 \'b6\'cf\u29615 \'bb\'b7\u22659 \'be\'b3),\u23588 \'d3\'c8\u20854 \'c6\'e4\u29992 \'d3\'c3\u21040 \'b5\'bd\u20687 \'cf\'f1java servlets\u36825 \'d5\'e2\u26679 \'d1\'f9\u30340 \'b5\'c4\u22810 \'b6\'e0\u23458 \'bf\'cd\u25143 \'bb\'a7\u22810 \'b6\'e0\u32447 \'cf\'df\u31243 \'b3\'cc\u30340 \'b5\'c4\u24212 \'d3\'a6\u29992 \'d3\'c3\u20013 \'d6\'d0\u12290 \'a1\'a3\uc1
+\par \~%%: \uc2\u36755 \'ca\'e4\u20986 \'b3\'f6\u19968 \'d2\'bb\u20010 \'b8\'f6"%"\u23383 \'d7\'d6\u31526 \'b7\'fb\uc1
+\par \~%F: \uc2\u36755 \'ca\'e4\u20986 \'b3\'f6\u26085 \'c8\'d5\u24535 \'d6\'be\u28040 \'cf\'fb\u24687 \'cf\'a2\u20135 \'b2\'fa\u29983 \'c9\'fa\u26102 \'ca\'b1\u25152 \'cb\'f9\u22312 \'d4\'da\u30340 \'b5\'c4\u25991 \'ce\'c4\u20214 \'bc\'fe\u21517 \'c3\'fb\u31216 \'b3\'c6\uc1
+\par \~%L: \uc2\u36755 \'ca\'e4\u20986 \'b3\'f6\u20195 \'b4\'fa\u30721 \'c2\'eb\u20013 \'d6\'d0\u30340 \'b5\'c4\u34892 \'d0\'d0\u21495 \'ba\'c5\uc1
+\par \~%m: \uc2\u36755 \'ca\'e4\u20986 \'b3\'f6\u20195 \'b4\'fa\u30721 \'c2\'eb\u20013 \'d6\'d0\u25351 \'d6\'b8\u23450 \'b6\'a8\u30340 \'b5\'c4\u28040 \'cf\'fb\u24687 \'cf\'a2,\u20135 \'b2\'fa\u29983 \'c9\'fa\u30340 \'b5\'c4\u26085 \'c8\'d5\u24535 \'d6\'be\u20855 \'be\'df\u20307 \'cc\'e5\u20449 \'d0\'c5\u24687 \'cf\'a2\uc1
+\par \~%n: \uc2\u36755 \'ca\'e4\u20986 \'b3\'f6\u19968 \'d2\'bb\u20010 \'b8\'f6\u22238 \'bb\'d8\u36710 \'b3\'b5\u25442 \'bb\'bb\u34892 \'d0\'d0\u31526 \'b7\'fb\u65292 \'a3\'acWindows\u24179 \'c6\'bd\u21488 \'cc\'a8\u20026 \'ce\'aa"/r/n"\u65292 \'a3\'acUnix\u24179 \'c6\'bd\u21488 \'cc\'a8\u20026 \'ce\'aa"/n"\u36755 \'ca\'e4\u20986 \'b3\'f6\u26085 \'c8\'d5\u24535 \'d6\'be\u20449 \'d0\'c5\u24687 \'cf\'a2\u25442 \'bb\'bb\u34892 \'d0\'d0\uc1
+\par \~\uc2\u21487 \'bf\'c9\u20197 \'d2\'d4\u22312 \'d4\'da%\u19982 \'d3\'eb\u27169 \'c4\'a3\u24335 \'ca\'bd\u23383 \'d7\'d6\u31526 \'b7\'fb\u20043 \'d6\'ae\u38388 \'bc\'e4\u21152 \'bc\'d3\u19978 \'c9\'cf\u20462 \'d0\'de\u39280 \'ca\'ce\u31526 \'b7\'fb\u26469 \'c0\'b4\u25511 \'bf\'d8\u21046 \'d6\'c6\u20854 \'c6\'e4\u26368 \'d7\'ee\u23567 \'d0\'a1\u23485 \'bf\'ed\u24230 \'b6\'c8\u12289 \'a1\'a2\u26368 \'d7\'ee\u22823 \'b4\'f3\u23485 \'bf\'ed\u24230 \'b6\'c8\u12289 \'a1\'a2\u21644 \'ba\'cd\u25991 \'ce\'c4\u26412 \'b1\'be\u30340 \'b5\'c4\u23545 \'b6\'d4\u40784 \'c6\'eb\u26041 \'b7\'bd\u24335 \'ca\'bd\u12290 \'a1\'a3\u22914 \'c8\'e7\u65306 \'a3\'ba\uc1
+\par \~1)%20c\uc2\u65306 \'a3\'ba\u25351 \'d6\'b8\u23450 \'b6\'a8\u36755 \'ca\'e4\u20986 \'b3\'f6category\u30340 \'b5\'c4\u21517 \'c3\'fb\u31216 \'b3\'c6\u65292 \'a3\'ac\u26368 \'d7\'ee\u23567 \'d0\'a1\u30340 \'b5\'c4\u23485 \'bf\'ed\u24230 \'b6\'c8\u26159 \'ca\'c720\u65292 \'a3\'ac\u22914 \'c8\'e7\u26524 \'b9\'fbcategory\u30340 \'b5\'c4\u21517 \'c3\'fb\u31216 \'b3\'c6\u23567 \'d0\'a1\u20110 \'d3\'da20\u30340 \'b5\'c4\u35805 \'bb\'b0\u65292 \'a3\'ac\u40664 \'c4\'ac\u35748 \'c8\'cf\u30340 \'b5\'c4\u24773 \'c7\'e9\u20917 \'bf\'f6\u19979 \'cf\'c2\u21491 \'d3\'d2\u23545 \'b6\'d4\u40784 \'c6\'eb\u12290 \'a1\'a3\uc1
+\par \~2)%-20c:\uc2\u25351 \'d6\'b8\u23450 \'b6\'a8\u36755 \'ca\'e4\u20986 \'b3\'f6category\u30340 \'b5\'c4\u21517 \'c3\'fb\u31216 \'b3\'c6\u65292 \'a3\'ac\u26368 \'d7\'ee\u23567 \'d0\'a1\u30340 \'b5\'c4\u23485 \'bf\'ed\u24230 \'b6\'c8\u26159 \'ca\'c720\u65292 \'a3\'ac\u22914 \'c8\'e7\u26524 \'b9\'fbcategory\u30340 \'b5\'c4\u21517 \'c3\'fb\u31216 \'b3\'c6\u23567 \'d0\'a1\u20110 \'d3\'da20\u30340 \'b5\'c4\u35805 \'bb\'b0\u65292 \'a3\'ac"-"\u21495 \'ba\'c5\u25351 \'d6\'b8\u23450 \'b6\'a8\u24038 \'d7\'f3\u23545 \'b6\'d4\u40784 \'c6\'eb\u12290 \'a1\'a3\uc1
+\par \~3)%.30c:\uc2\u25351 \'d6\'b8\u23450 \'b6\'a8\u36755 \'ca\'e4\u20986 \'b3\'f6category\u30340 \'b5\'c4\u21517 \'c3\'fb\u31216 \'b3\'c6\u65292 \'a3\'ac\u26368 \'d7\'ee\u22823 \'b4\'f3\u30340 \'b5\'c4\u23485 \'bf\'ed\u24230 \'b6\'c8\u26159 \'ca\'c730\u65292 \'a3\'ac\u22914 \'c8\'e7\u26524 \'b9\'fbcategory\u30340 \'b5\'c4\u21517 \'c3\'fb\u31216 \'b3\'c6\u22823 \'b4\'f3\u20110 \'d3\'da30\u30340 \'b5\'c4\u35805 \'bb\'b0\u65292 \'a3\'ac\u23601 \'be\'cd\u20250 \'bb\'e1\u23558 \'bd\'ab\u24038 \'d7\'f3\u36793 \'b1\'df\u22810 \'b6\'e0\u20986 \'b3\'f6\u30340 \'b5\'c4\u23383 \'d7\'d6\u31526 \'b7\'fb\u25130 \'bd\'d8\u25481 \'b5\'f4\u65292 \'a3\'ac\u20294 \'b5\'ab\u23567 \'d0\'a1\u20110 \'d3\'da30\u30340 \'b5\'c4\u35805 \'bb\'b0\u20063 \'d2\'b2\u19981 \'b2\'bb\u20250 \'bb\'e1\u26377 \'d3\'d0\u31354 \'bf\'d5\u26684 \'b8\'f1\u12290 \'a1\'a3\uc1
+\par \~4)%20.30c:\uc2\u22914 \'c8\'e7\u26524 \'b9\'fbcategory\u30340 \'b5\'c4\u21517 \'c3\'fb\u31216 \'b3\'c6\u23567 \'d0\'a1\u20110 \'d3\'da20\u23601 \'be\'cd\u34917 \'b2\'b9\u31354 \'bf\'d5\u26684 \'b8\'f1\u65292 \'a3\'ac\u24182 \'b2\'a2\u19988 \'c7\'d2\u21491 \'d3\'d2\u23545 \'b6\'d4\u40784 \'c6\'eb\u65292 \'a3\'ac\u22914 \'c8\'e7\u26524 \'b9\'fb\u20854 \'c6\'e4\u21517 \'c3\'fb\u31216 \'b3\'c6\u38271 \'b3\'a4\u20110 \'d3\'da30\u23383 \'d7\'d6\u31526 \'b7\'fb\u65292 \'a3\'ac\u23601 \'be\'cd\u20174 \'b4\'d3\u24038 \'d7\'f3\u36793 \'b1\'df\u36739 \'bd\'cf\u36828 \'d4\'b6\u36755 \'ca\'e4\u20986 \'b3\'f6\u30340 \'b5\'c4\u23383 \'d7\'d6\u31526 \'b7\'fb\u25130 \'bd\'d8\u25481 \'b5\'f4\u12290 \'a1\'a3\uc1
+\par 
+\par \uc2\u20108 \'b6\'fe.\u25991 \'ce\'c4\u20214 \'bc\'fe\u37197 \'c5\'e4\u32622 \'d6\'c3Sample1\uc1
+\par log4j.rootLogger=DEBUG,A1,R
+\par #log4j.rootLogger=INFO,A1,R
+\par 
+\par \plain \f1\fs24\cf2 # ConsoleAppender \uc2\u36755 \'ca\'e4\u20986 \'b3\'f6\uc1
+\par \plain \f1\fs24 log4j.appender.A1=org.apache.log4j.ConsoleAppender
+\par log4j.appender.A1.layout=org.apache.log4j.PatternLayout
+\par log4j.appender.A1.layout.ConversionPattern=%-d\{yyyy-MM-dd HH:mm:ss,SSS\} [%c]-[%p] %m%n
+\par 
+\par \plain \f1\fs24\cf2 # File \uc2\u36755 \'ca\'e4\u20986 \'b3\'f6 \u19968 \'d2\'bb\u22825 \'cc\'ec\u19968 \'d2\'bb\u20010 \'b8\'f6\u25991 \'ce\'c4\u20214 \'bc\'fe,\u36755 \'ca\'e4\u20986 \'b3\'f6\u36335 \'c2\'b7\u24452 \'be\'b6\u21487 \'bf\'c9\u20197 \'d2\'d4\u23450 \'b6\'a8\u21046 \'d6\'c6,\u19968 \'d2\'bb\u33324 \'b0\'e3\u22312 \'d4\'da\u26681 \'b8\'f9\u36335 \'c2\'b7\u24452 \'be\'b6\u19979 \'cf\'c2\uc1
+\par \plain \f1\fs24 log4j.appender.R=org.apache.log4j.DailyRollingFileAppender
+\par log4j.appender.R.File=blog_log.txt
+\par log4j.appender.R.MaxFileSize=500KB
+\par log4j.appender.R.MaxBackupIndex=10
+\par log4j.appender.R.layout=org.apache.log4j.PatternLayout
+\par log4j.appender.R.layout.ConversionPattern=%d\{yyyy-MM-dd HH:mm:ss,SSS\} [%t] [%c] [%p] - %m%n
+\par 
+\par \uc2\u25991 \'ce\'c4\u20214 \'bc\'fe\u37197 \'c5\'e4\u32622 \'d6\'c3Sample2\uc1
+\par \uc2\u19979 \'cf\'c2\u38754 \'c3\'e6\u32473 \'b8\'f8\u20986 \'b3\'f6\u30340 \'b5\'c4Log4J\u37197 \'c5\'e4\u32622 \'d6\'c3\u25991 \'ce\'c4\u20214 \'bc\'fe\u23454 \'ca\'b5\u29616 \'cf\'d6\u20102 \'c1\'cb\u36755 \'ca\'e4\u20986 \'b3\'f6\u21040 \'b5\'bd\u25511 \'bf\'d8\u21046 \'d6\'c6\u21488 \'cc\'a8\u65292 \'a3\'ac\u25991 \'ce\'c4\u20214 \'bc\'fe\u65292 \'a3\'ac\u22238 \'bb\'d8\u28378 \'b9\'f6\u25991 \'ce\'c4\u20214 \'bc\'fe\u65292 \'a3\'ac\u21457 \'b7\'a2\u36865 \'cb\'cd\u26085 \'c8\'d5\u24535 \'d6\'be\u37038 \'d3\'ca\u20214 \'bc\'fe\u65292 \'a3\'ac\u36755 \'ca\'e4\u20986 \'b3\'f6\u21040 \'b5\'bd\u25968 \'ca\'fd\u25454 \'be\'dd\u24211 \'bf\'e2\u26085 \'c8\'d5\u24535 \'d6\'be\u34920 \'b1\'ed\u65292 \'a3\'ac\u33258 \'d7\'d4\u23450 \'b6\'a8\u20041 \'d2\'e5\u26631 \'b1\'ea\u31614 \'c7\'a9\u31561 \'b5\'c8\u20840 \'c8\'ab\u22871 \'cc\'d7\u21151 \'b9\'a6\u33021 \'c4\'dc\u12290 \'a1\'a3\uc1
+\par log4j.rootLogger=DEBUG,CONSOLE,A1,im\~
+\par #DEBUG,CONSOLE,FILE,ROLLING_FILE,MAIL,DATABASE
+\par log4j.addivity.org.apache=true
+\par ###################\~
+\par # Console Appender\~
+\par ###################\~
+\par log4j.appender.CONSOLE=org.apache.log4j.ConsoleAppender\~
+\par log4j.appender.Threshold=DEBUG\~
+\par log4j.appender.CONSOLE.Target=System.out\~
+\par log4j.appender.CONSOLE.layout=org.apache.log4j.PatternLayout\~
+\par log4j.appender.CONSOLE.layout.ConversionPattern=[framework] %d - %c -%-4r [%t] %-5p %c %x - %m%n\~
+\par #log4j.appender.CONSOLE.layout.ConversionPattern=[start]%d\{DATE\}[DATE]%n%p[PRIORITY]%n%x[NDC]%n%t[THREAD] n%c[CATEGORY]%n%m[MESSAGE]%n%n
+\par #####################\~
+\par # File Appender\~
+\par #####################\~
+\par log4j.appender.FILE=org.apache.log4j.FileAppender\~
+\par log4j.appender.FILE.File=file.log\~
+\par log4j.appender.FILE.Append=false\~
+\par log4j.appender.FILE.layout=org.apache.log4j.PatternLayout\~
+\par log4j.appender.FILE.layout.ConversionPattern=[framework] %d - %c -%-4r [%t] %-5p %c %x - %m%n\~
+\par # Use this layout for LogFactor 5 analysis
+\par ########################\~
+\par # Rolling File\~
+\par ########################\~
+\par log4j.appender.ROLLING_FILE=org.apache.log4j.RollingFileAppender\~
+\par log4j.appender.ROLLING_FILE.Threshold=ERROR\~
+\par log4j.appender.ROLLING_FILE.File=rolling.log\~
+\par log4j.appender.ROLLING_FILE.Append=true\~
+\par log4j.appender.ROLLING_FILE.MaxFileSize=10KB\~
+\par log4j.appender.ROLLING_FILE.MaxBackupIndex=1\~
+\par log4j.appender.ROLLING_FILE.layout=org.apache.log4j.PatternLayout\~
+\par log4j.appender.ROLLING_FILE.layout.ConversionPattern=[framework] %d - %c -%-4r [%t] %-5p %c %x - %m%n
+\par ####################\~
+\par # Socket Appender\~
+\par ####################\~
+\par log4j.appender.SOCKET=org.apache.log4j.RollingFileAppender\~
+\par log4j.appender.SOCKET.RemoteHost=localhost\~
+\par log4j.appender.SOCKET.Port=5001\~
+\par log4j.appender.SOCKET.LocationInfo=true\~
+\par # Set up for Log Facter 5\~
+\par log4j.appender.SOCKET.layout=org.apache.log4j.PatternLayout\~
+\par log4j.appender.SOCET.layout.ConversionPattern=[start]%d\{DATE\}[DATE]%n%p[PRIORITY]%n%x[NDC]%n%t[THREAD]%n%c[CATEGORY]%n%m[MESSAGE]%n%n
+\par ########################\~
+\par # Log Factor 5 Appender\~
+\par ########################\~
+\par log4j.appender.LF5_APPENDER=org.apache.log4j.lf5.LF5Appender\~
+\par log4j.appender.LF5_APPENDER.MaxNumberOfRecords=2000
+\par ########################\~
+\par # SMTP Appender\~
+\par #######################\~
+\par log4j.appender.MAIL=org.apache.log4j.net.SMTPAppender\~
+\par log4j.appender.MAIL.Threshold=FATAL\~
+\par log4j.appender.MAIL.BufferSize=10\~
+\par \plain \f1\ul\fs24\cf1 log4j.appender.MAIL.From=chenyl@yeqiangwei.com
+\par \plain \f1\fs24 log4j.appender.MAIL.SMTPHost=mail.hollycrm.com\~
+\par log4j.appender.MAIL.Subject=Log4J Message\~
+\par \plain \f1\ul\fs24\cf1 log4j.appender.MAIL.To=chenyl@yeqiangwei.com
+\par \plain \f1\fs24 log4j.appender.MAIL.layout=org.apache.log4j.PatternLayout\~
+\par log4j.appender.MAIL.layout.ConversionPattern=[framework] %d - %c -%-4r [%t] %-5p %c %x - %m%n
+\par ########################\~
+\par # JDBC Appender\~
+\par #######################\~
+\par log4j.appender.DATABASE=org.apache.log4j.jdbc.JDBCAppender\~
+\par log4j.appender.DATABASE.URL=jdbc:mysql://localhost:3306/test\~
+\par log4j.appender.DATABASE.driver=com.mysql.jdbc.Driver\~
+\par log4j.appender.DATABASE.user=root\~
+\par log4j.appender.DATABASE.password=\~
+\par log4j.appender.DATABASE.sql=INSERT INTO LOG4J (Message) VALUES ('[framework] %d - %c -%-4r [%t] %-5p %c %x - %m%n')\~
+\par log4j.appender.DATABASE.layout=org.apache.log4j.PatternLayout\~
+\par log4j.appender.DATABASE.layout.ConversionPattern=[framework] %d - %c -%-4r [%t] %-5p %c %x - %m%n
+\par log4j.appender.A1=org.apache.log4j.DailyRollingFileAppender\~
+\par log4j.appender.A1.File=SampleMessages.log4j\~
+\par log4j.appender.A1.DatePattern=yyyyMMdd-HH'.log4j'\~
+\par log4j.appender.A1.layout=org.apache.log4j.xml.XMLLayout
+\par ###################\~
+\par #\uc2\u33258 \'d7\'d4\u23450 \'b6\'a8\u20041 \'d2\'e5Appender\~\uc1
+\par ###################\~
+\par log4j.appender.im = net.cybercorlin.util.logger.appender.IMAppender
+\par log4j.appender.im.host = mail.cybercorlin.net\~
+\par log4j.appender.im.username = username\~
+\par log4j.appender.im.password = password\~
+\par log4j.appender.im.recipient =\~\plain \f1\ul\fs24\cf1 corlin@yeqiangwei.com
+\par \plain \f1\fs24 log4j.appender.im.layout=org.apache.log4j.PatternLayout\~
+\par log4j.appender.im.layout.ConversionPattern =[framework] %d - %c -%-4r [%t] %-5p %c %x - %m%n
+\par \uc2\u19977 \'c8\'fd.\u39640 \'b8\'df\u32423 \'bc\'b6\u20351 \'ca\'b9\u29992 \'d3\'c3\uc1
+\par \uc2\u23454 \'ca\'b5\u39564 \'d1\'e9\u30446 \'c4\'bf\u30340 \'b5\'c4\u65306 \'a3\'ba\uc1
+\par \~1.\uc2\u25226 \'b0\'d1FATAL\u32423 \'bc\'b6\u38169 \'b4\'ed\u35823 \'ce\'f3\u20889 \'d0\'b4\u20837 \'c8\'eb2000NT\u26085 \'c8\'d5\u24535 \'d6\'be\uc1
+\par \~2. WARN\uc2\u65292 \'a3\'acERROR\u65292 \'a3\'acFATAL\u32423 \'bc\'b6\u38169 \'b4\'ed\u35823 \'ce\'f3\u21457 \'b7\'a2\u36865 \'cb\'cdemail\u36890 \'cd\'a8\u30693 \'d6\'aa\u31649 \'b9\'dc\u29702 \'c0\'ed\u21592 \'d4\'b1\uc1
+\par \~3.\uc2\u20854 \'c6\'e4\u20182 \'cb\'fb\u32423 \'bc\'b6\u21035 \'b1\'f0\u30340 \'b5\'c4\u38169 \'b4\'ed\u35823 \'ce\'f3\u30452 \'d6\'b1\u25509 \'bd\'d3\u22312 \'d4\'da\u21518 \'ba\'f3\u21488 \'cc\'a8\u36755 \'ca\'e4\u20986 \'b3\'f6\uc1
+\par \uc2\u23454 \'ca\'b5\u39564 \'d1\'e9\u27493 \'b2\'bd\u39588 \'d6\'e8\u65306 \'a3\'ba\uc1
+\par \~\uc2\u36755 \'ca\'e4\u20986 \'b3\'f6\u21040 \'b5\'bd2000NT\u26085 \'c8\'d5\u24535 \'d6\'be\uc1
+\par \~1.\uc2\u25226 \'b0\'d1Log4j\u21387 \'d1\'b9\u32553 \'cb\'f5\u21253 \'b0\'fc\u37324 \'c0\'ef\u30340 \'b5\'c4NTEventLogAppender.dll\u25335 \'bf\'bd\u21040 \'b5\'bdWINNT/SYSTEM32\u30446 \'c4\'bf\u24405 \'c2\'bc\u19979 \'cf\'c2\uc1
+\par \~2.\uc2\u20889 \'d0\'b4\u37197 \'c5\'e4\u32622 \'d6\'c3\u25991 \'ce\'c4\u20214 \'bc\'felog4j.properties\uc1
+\par # \uc2\u22312 \'d4\'da2000\u31995 \'cf\'b5\u32479 \'cd\'b3\u26085 \'c8\'d5\u24535 \'d6\'be\u36755 \'ca\'e4\u20986 \'b3\'f6\uc1
+\par \~log4j.logger.NTlog=FATAL, A8
+\par \~# APPENDER A8
+\par \~log4j.appender.A8=org.apache.log4j.nt.NTEventLogAppender
+\par \~log4j.appender.A8.Source=JavaTest
+\par \~log4j.appender.A8.layout=org.apache.log4j.PatternLayout
+\par \~log4j.appender.A8.layout.ConversionPattern=%-4r %-5p [%t] %37c %3x - %m%n
+\par 3.\uc2\u35843 \'b5\'f7\u29992 \'d3\'c3\u20195 \'b4\'fa\u30721 \'c2\'eb\u65306 \'a3\'ba\uc1
+\par \~Logger logger2 = Logger.getLogger("NTlog"); //\uc2\u35201 \'d2\'aa\u21644 \'ba\'cd\u37197 \'c5\'e4\u32622 \'d6\'c3\u25991 \'ce\'c4\u20214 \'bc\'fe\u20013 \'d6\'d0\u35774 \'c9\'e8\u32622 \'d6\'c3\u30340 \'b5\'c4\u21517 \'c3\'fb\u23383 \'d7\'d6\u30456 \'cf\'e0\u21516 \'cd\'ac\uc1
+\par \~logger2.debug("debug!!!");
+\par \~logger2.info("info!!!");
+\par \~logger2.warn("warn!!!");
+\par \~logger2.error("error!!!");
+\par \~//\uc2\u21482 \'d6\'bb\u26377 \'d3\'d0\u36825 \'d5\'e2\u20010 \'b8\'f6\u38169 \'b4\'ed\u35823 \'ce\'f3\u25165 \'b2\'c5\u20250 \'bb\'e1\u20889 \'d0\'b4\u20837 \'c8\'eb2000\u26085 \'c8\'d5\u24535 \'d6\'be\uc1
+\par \~logger2.fatal("fatal!!!");
+\par \uc2\u21457 \'b7\'a2\u36865 \'cb\'cdemail\u36890 \'cd\'a8\u30693 \'d6\'aa\u31649 \'b9\'dc\u29702 \'c0\'ed\u21592 \'d4\'b1\u65306 \'a3\'ba\uc1
+\par \~1. \uc2\u39318 \'ca\'d7\u20808 \'cf\'c8\u19979 \'cf\'c2\u36733 \'d4\'d8JavaMail\u21644 \'ba\'cdJAF,\~\uc1
+\par \~\~\plain \f1\ul\fs24\cf1 http://java.sun.com/j2ee/ja/javamail/index.html
+\par \plain \f1\fs24 \~\~\plain \f1\ul\fs24\cf1 http://java.sun.com/beans/glasgow/jaf.html
+\par \plain \f1\fs24 \~\uc2\u22312 \'d4\'da\u39033 \'cf\'ee\u30446 \'c4\'bf\u20013 \'d6\'d0\u24341 \'d2\'fd\u29992 \'d3\'c3mail.jar\u21644 \'ba\'cdactivation.jar\u12290 \'a1\'a3\uc1
+\par \~2. \uc2\u20889 \'d0\'b4\u37197 \'c5\'e4\u32622 \'d6\'c3\u25991 \'ce\'c4\u20214 \'bc\'fe\uc1
+\par \~# \uc2\u23558 \'bd\'ab\u26085 \'c8\'d5\u24535 \'d6\'be\u21457 \'b7\'a2\u36865 \'cb\'cd\u21040 \'b5\'bdemail\uc1
+\par \~log4j.logger.MailLog=WARN,A5
+\par \~#\~ APPENDER A5
+\par \~log4j.appender.A5=org.apache.log4j.net.SMTPAppender
+\par \~log4j.appender.A5.BufferSize=5
+\par \~\plain \f1\ul\fs24\cf1 log4j.appender.A5.To=chunjie@yeqiangwei.com
+\par \plain \f1\fs24 \~\plain \f1\ul\fs24\cf1 log4j.appender.A5.From=error@yeqiangwei.com
+\par \plain \f1\fs24 \~log4j.appender.A5.Subject=ErrorLog
+\par \~log4j.appender.A5.SMTPHost=smtp.263.net
+\par \~log4j.appender.A5.layout=org.apache.log4j.PatternLayout
+\par \~log4j.appender.A5.layout.ConversionPattern=%-4r %-5p [%t] %37c %3x - %m%n
+\par \~3.\uc2\u35843 \'b5\'f7\u29992 \'d3\'c3\u20195 \'b4\'fa\u30721 \'c2\'eb\u65306 \'a3\'ba\uc1
+\par \~//\uc2\u25226 \'b0\'d1\u26085 \'c8\'d5\u24535 \'d6\'be\u21457 \'b7\'a2\u36865 \'cb\'cd\u21040 \'b5\'bdmail\uc1
+\par \~Logger logger3 = Logger.getLogger("MailLog");
+\par \~logger3.warn("warn!!!");
+\par \~logger3.error("error!!!");
+\par \~logger3.fatal("fatal!!!");
+\par \uc2\u22312 \'d4\'da\u21518 \'ba\'f3\u21488 \'cc\'a8\u36755 \'ca\'e4\u20986 \'b3\'f6\u25152 \'cb\'f9\u26377 \'d3\'d0\u31867 \'c0\'e0\u21035 \'b1\'f0\u30340 \'b5\'c4\u38169 \'b4\'ed\u35823 \'ce\'f3\u65306 \'a3\'ba\uc1
+\par \~1. \uc2\u20889 \'d0\'b4\u37197 \'c5\'e4\u32622 \'d6\'c3\u25991 \'ce\'c4\u20214 \'bc\'fe\uc1
+\par \~# \uc2\u22312 \'d4\'da\u21518 \'ba\'f3\u21488 \'cc\'a8\u36755 \'ca\'e4\u20986 \'b3\'f6\uc1
+\par \~log4j.logger.console=DEBUG, A1
+\par \~# APPENDER A1
+\par \~log4j.appender.A1=org.apache.log4j.ConsoleAppender
+\par \~log4j.appender.A1.layout=org.apache.log4j.PatternLayout
+\par \~log4j.appender.A1.layout.ConversionPattern=%-4r %-5p [%t] %37c %3x - %m%n
+\par \~2\uc2\u65294 \'a3\'ae\u35843 \'b5\'f7\u29992 \'d3\'c3\u20195 \'b4\'fa\u30721 \'c2\'eb\uc1
+\par \~Logger logger1 = Logger.getLogger("console");
+\par \~logger1.debug("debug!!!");
+\par \~logger1.info("info!!!");
+\par \~logger1.warn("warn!!!");
+\par \~logger1.error("error!!!");
+\par \~logger1.fatal("fatal!!!");
+\par --------------------------------------------------------------------
+\par \~\uc2\u20840 \'c8\'ab\u37096 \'b2\'bf\u37197 \'c5\'e4\u32622 \'d6\'c3\u25991 \'ce\'c4\u20214 \'bc\'fe\u65306 \'a3\'balog4j.properties\uc1
+\par \~# \uc2\u22312 \'d4\'da\u21518 \'ba\'f3\u21488 \'cc\'a8\u36755 \'ca\'e4\u20986 \'b3\'f6\uc1
+\par \~log4j.logger.console=DEBUG, A1
+\par \~# APPENDER A1
+\par \~log4j.appender.A1=org.apache.log4j.ConsoleAppender
+\par \~log4j.appender.A1.layout=org.apache.log4j.PatternLayout
+\par \~log4j.appender.A1.layout.ConversionPattern=%-4r %-5p [%t] %37c %3x - %m%n
+\par # \uc2\u22312 \'d4\'da2000\u31995 \'cf\'b5\u32479 \'cd\'b3\u26085 \'c8\'d5\u24535 \'d6\'be\u36755 \'ca\'e4\u20986 \'b3\'f6\uc1
+\par \~log4j.logger.NTlog=FATAL, A8
+\par \~# APPENDER A8
+\par \~log4j.appender.A8=org.apache.log4j.nt.NTEventLogAppender
+\par \~log4j.appender.A8.Source=JavaTest
+\par \~log4j.appender.A8.layout=org.apache.log4j.PatternLayout
+\par \~log4j.appender.A8.layout.ConversionPattern=%-4r %-5p [%t] %37c %3x - %m%n
+\par # \uc2\u23558 \'bd\'ab\u26085 \'c8\'d5\u24535 \'d6\'be\u21457 \'b7\'a2\u36865 \'cb\'cd\u21040 \'b5\'bdemail\uc1
+\par \~log4j.logger.MailLog=WARN,A5
+\par \~#\~ APPENDER A5
+\par \~log4j.appender.A5=org.apache.log4j.net.SMTPAppender
+\par \~log4j.appender.A5.BufferSize=5
+\par \~\plain \f1\ul\fs24\cf1 log4j.appender.A5.To=chunjie@yeqiangwei.com
+\par \plain \f1\fs24 \~\plain \f1\ul\fs24\cf1 log4j.appender.A5.From=error@yeqiangwei.com
+\par \plain \f1\fs24 \~log4j.appender.A5.Subject=ErrorLog
+\par \~log4j.appender.A5.SMTPHost=smtp.263.net
+\par \~log4j.appender.A5.layout=org.apache.log4j.PatternLayout
+\par \~log4j.appender.A5.layout.ConversionPattern=%-4r %-5p [%t] %37c %3x - %m%n
+\par \uc2\u20840 \'c8\'ab\u37096 \'b2\'bf\u20195 \'b4\'fa\u30721 \'c2\'eb\u65306 \'a3\'baLog4jTest.java\uc1
+\par \~\~
+\par /*\~
+\par \~ * \uc2\u21019 \'b4\'b4\u24314 \'bd\'a8\u26085 \'c8\'d5\u26399 \'c6\'da 2003-11-13\~\uc1
+\par \~ */\~
+\par \~package edu.bcu.Bean;\~
+\par \~import org.apache.log4j.*;\~
+\par \~//import org.apache.log4j.nt.*;\~
+\par \~//import org.apache.log4j.net.*;\~
+\par \~/**\~
+\par \~ * @author yanxu\~
+\par \~ */\~
+\par \~public class Log4jTest\~
+\par \~\{\~
+\par \~ public static void main(String args[])\~
+\par \~ \{\~
+\par \~\~ PropertyConfigurator.configure("log4j.properties");\~
+\par \~\~ //\uc2\u22312 \'d4\'da\u21518 \'ba\'f3\u21488 \'cc\'a8\u36755 \'ca\'e4\u20986 \'b3\'f6\~\uc1
+\par \~\~ Logger logger1 = Logger.getLogger("console");\~
+\par \~\~ logger1.debug("debug!!!");\~
+\par \~\~ logger1.info("info!!!");\~
+\par \~\~ logger1.warn("warn!!!");\~
+\par \~\~ logger1.error("error!!!");\~
+\par \~\~ logger1.fatal("fatal!!!");
+\par //\uc2\u22312 \'d4\'daNT\u31995 \'cf\'b5\u32479 \'cd\'b3\u26085 \'c8\'d5\u24535 \'d6\'be\u36755 \'ca\'e4\u20986 \'b3\'f6\~\uc1
+\par \~\~ Logger logger2 = Logger.getLogger("NTlog");\~
+\par \~\~ //NTEventLogAppender nla = new NTEventLogAppender();\~
+\par \~\~ logger2.debug("debug!!!");\~
+\par \~\~ logger2.info("info!!!");\~
+\par \~\~ logger2.warn("warn!!!");\~
+\par \~\~ logger2.error("error!!!");\~
+\par \~\~ //\uc2\u21482 \'d6\'bb\u26377 \'d3\'d0\u36825 \'d5\'e2\u20010 \'b8\'f6\u38169 \'b4\'ed\u35823 \'ce\'f3\u25165 \'b2\'c5\u20250 \'bb\'e1\u20889 \'d0\'b4\u20837 \'c8\'eb2000\u26085 \'c8\'d5\u24535 \'d6\'be\~\uc1
+\par \~\~ logger2.fatal("fatal!!!");
+\par //\uc2\u25226 \'b0\'d1\u26085 \'c8\'d5\u24535 \'d6\'be\u21457 \'b7\'a2\u36865 \'cb\'cd\u21040 \'b5\'bdmail\~\uc1
+\par \~\~ Logger logger3 = Logger.getLogger("MailLog");\~
+\par \~\~ //SMTPAppender sa = new SMTPAppender();\~
+\par \~\~ logger3.warn("warn!!!");\~
+\par \~\~ logger3.error("error!!!");\~
+\par \~\~ logger3.fatal("fatal!!!");\~
+\par \~ \}\~
+\par \~\}\par}

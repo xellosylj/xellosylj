@@ -1,0 +1,314 @@
+{\rtf1\fbidis\ansi\ansicpg0\uc1\deff0\deflang0\deflangfe0{\fonttbl{\f0\fnil \'cb\'ce\'cc\'e5;}{\f1\fnil Consolas;}{\f2\fnil\fcharset134 \'cb\'ce\'cc\'e5;}}{\colortbl;\red0\green0\blue255;\red0\green0\blue0;\red127\green0\blue85;\red0\green0\blue192;\red42\green0\blue255;\red63\green127\blue95;\red106\green62\blue62;\red232\green242\blue254;\red255\green255\blue255;}
+
+
+\pard\fi0\li0\qc\ri0\sb0\sa0\itap0 \plain \f2\b\lang2052\fs24\chcbpat8\cf2 web.xml\uc2\u35299 \'bd\'e2\u26512 \'ce\'f6rule\uc1
+\par \pard\fi0\li0\ql\ri0\sb0\sa0\itap0 
+\par \plain \f1\fs22\chcbpat8\cf2 org.apache.catalina.startup.WebRuleSet
+\par \pard\fi480\li0\ql\ri0\sb0\sa0\itap0 \plain \f1\fs22\cf7 
+\par \tab \tab   digester.\plain \f1\fs22\cf2 addRule(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2 , \plain \f1\b\fs22\cf3 new\plain \f1\fs22\cf2  SetPublicIdRule(\plain \f1\fs22\cf5 "setPublicId"\plain \f1\fs22\cf2 ));
+\par \pard\fi0\li0\ql\ri0\sb0\sa0\itap0 \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 179 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addRule(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2 , \plain \f1\b\fs22\cf3 new\plain \f1\fs22\cf2  IgnoreAnnotationsRule());
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 181 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addRule(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2 , \plain \f1\b\fs22\cf3 new\plain \f1\fs22\cf2  VersionRule());
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /* 185 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addRule(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/absolute-ordering"\plain \f1\fs22\cf2 , \plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 absoluteOrdering\plain \f1\fs22\cf2 );
+\par \plain \f1\fs22\cf6 /* 186 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addRule(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/ordering"\plain \f1\fs22\cf2 , \plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 relativeOrdering\plain \f1\fs22\cf2 );
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 188 */\plain \f1\fs22\cf2      \plain \f1\b\fs22\cf3 if\plain \f1\fs22\cf2  (\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fragment\plain \f1\fs22\cf2 )
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      \{
+\par \plain \f1\fs22\cf6 /* 190 */\plain \f1\fs22\cf2        \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addRule(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/name"\plain \f1\fs22\cf2 , \plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 name\plain \f1\fs22\cf2 );
+\par \plain \f1\fs22\cf6 /* 191 */\plain \f1\fs22\cf2        \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/ordering/after/name"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "addAfterOrdering"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2        
+\par \plain \f1\fs22\cf6 /* 193 */\plain \f1\fs22\cf2        \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/ordering/after/others"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "addAfterOrderingOthers"\plain \f1\fs22\cf2 );
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2        
+\par \plain \f1\fs22\cf6 /* 195 */\plain \f1\fs22\cf2        \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/ordering/before/name"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "addBeforeOrdering"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2        
+\par \plain \f1\fs22\cf6 /* 197 */\plain \f1\fs22\cf2        \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/ordering/before/others"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "addBeforeOrderingOthers"\plain \f1\fs22\cf2 );
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      \}
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      \plain \f1\b\fs22\cf3 else
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      \{
+\par \plain \f1\fs22\cf6 /* 201 */\plain \f1\fs22\cf2        \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/absolute-ordering/name"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "addAbsoluteOrdering"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2        
+\par \plain \f1\fs22\cf6 /* 203 */\plain \f1\fs22\cf2        \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/absolute-ordering/others"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "addAbsoluteOrderingOthers"\plain \f1\fs22\cf2 );
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      \}
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /* 207 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/context-param"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "addContextParam"\plain \f1\fs22\cf2 , 2);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 209 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallParam(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/context-param/param-name"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /* 210 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallParam(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/context-param/param-value"\plain \f1\fs22\cf2 , 1);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 212 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/display-name"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setDisplayName"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /* 215 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addRule(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/distributable"\plain \f1\fs22\cf2 , \plain \f1\b\fs22\cf3 new\plain \f1\fs22\cf2  SetDistributableRule());
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /* 218 */\plain \f1\fs22\cf2      configureNamingRules(\plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 );
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 220 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addObjectCreate(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/error-page"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "org.apache.catalina.deploy.ErrorPage"\plain \f1\fs22\cf2 );
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 222 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addSetNext(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/error-page"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "addErrorPage"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "org.apache.catalina.deploy.ErrorPage"\plain \f1\fs22\cf2 );
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /* 226 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/error-page/error-code"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setErrorCode"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 228 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/error-page/exception-type"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setExceptionType"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 230 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/error-page/location"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setLocation"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /* 233 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addObjectCreate(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/filter"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "org.apache.catalina.deploy.FilterDef"\plain \f1\fs22\cf2 );
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 235 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addSetNext(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/filter"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "addFilter"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "org.apache.catalina.deploy.FilterDef"\plain \f1\fs22\cf2 );
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /* 239 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/filter/description"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setDescription"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 241 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/filter/display-name"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setDisplayName"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 243 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/filter/filter-class"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setFilterClass"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 245 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/filter/filter-name"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setFilterName"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 247 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/filter/icon/large-icon"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setLargeIcon"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 249 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/filter/icon/small-icon"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setSmallIcon"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 251 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/filter/async-supported"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setAsyncSupported"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /* 254 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/filter/init-param"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "addInitParameter"\plain \f1\fs22\cf2 , 2);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 256 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallParam(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/filter/init-param/param-name"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 258 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallParam(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/filter/init-param/param-value"\plain \f1\fs22\cf2 , 1);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /* 261 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addObjectCreate(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/filter-mapping"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "org.apache.catalina.deploy.FilterMap"\plain \f1\fs22\cf2 );
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 263 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addSetNext(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/filter-mapping"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "addFilterMapping"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "org.apache.catalina.deploy.FilterMap"\plain \f1\fs22\cf2 );
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /* 267 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/filter-mapping/filter-name"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setFilterName"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 269 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/filter-mapping/servlet-name"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "addServletName"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 271 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/filter-mapping/url-pattern"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "addURLPattern"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /* 274 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/filter-mapping/dispatcher"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setDispatcher"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /* 277 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/listener/listener-class"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "addListener"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /* 280 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addRule(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/jsp-config"\plain \f1\fs22\cf2 , \plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 jspConfig\plain \f1\fs22\cf2 );
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /* 283 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addObjectCreate(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/jsp-config/jsp-property-group"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "org.apache.catalina.deploy.JspPropertyGroup"\plain \f1\fs22\cf2 );
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 285 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addSetNext(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/jsp-config/jsp-property-group"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "addJspPropertyGroup"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "org.apache.catalina.deploy.JspPropertyGroup"\plain \f1\fs22\cf2 );
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /* 288 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/jsp-config/jsp-property-group/deferred-syntax-allowed-as-literal"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setDeferredSyntax"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 290 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/jsp-config/jsp-property-group/el-ignored"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setElIgnored"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 292 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/jsp-config/jsp-property-group/include-coda"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "addIncludeCoda"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 294 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/jsp-config/jsp-property-group/include-prelude"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "addIncludePrelude"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 296 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/jsp-config/jsp-property-group/is-xml"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setIsXml"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 298 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/jsp-config/jsp-property-group/page-encoding"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setPageEncoding"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 300 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/jsp-config/jsp-property-group/scripting-invalid"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setScriptingInvalid"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 302 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/jsp-config/jsp-property-group/trim-directive-whitespaces"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setTrimWhitespace"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 304 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/jsp-config/jsp-property-group/url-pattern"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "addUrlPattern"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 306 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/jsp-config/jsp-property-group/default-content-type"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setDefaultContentType"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 308 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/jsp-config/jsp-property-group/buffer"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setBuffer"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 310 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/jsp-config/jsp-property-group/error-on-undeclared-namespace"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setErrorOnUndeclaredNamespace"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /* 313 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addRule(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/login-config"\plain \f1\fs22\cf2 , \plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 loginConfig\plain \f1\fs22\cf2 );
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /* 316 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addObjectCreate(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/login-config"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "org.apache.catalina.deploy.LoginConfig"\plain \f1\fs22\cf2 );
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 318 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addSetNext(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/login-config"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setLoginConfig"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "org.apache.catalina.deploy.LoginConfig"\plain \f1\fs22\cf2 );
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /* 322 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/login-config/auth-method"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setAuthMethod"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 324 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/login-config/realm-name"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setRealmName"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 326 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/login-config/form-login-config/form-error-page"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setErrorPage"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 328 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/login-config/form-login-config/form-login-page"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setLoginPage"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /* 331 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/mime-mapping"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "addMimeMapping"\plain \f1\fs22\cf2 , 2);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 333 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallParam(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/mime-mapping/extension"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /* 334 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallParam(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/mime-mapping/mime-type"\plain \f1\fs22\cf2 , 1);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /* 337 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addObjectCreate(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/security-constraint"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "org.apache.catalina.deploy.SecurityConstraint"\plain \f1\fs22\cf2 );
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 339 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addSetNext(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/security-constraint"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "addSecurityConstraint"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "org.apache.catalina.deploy.SecurityConstraint"\plain \f1\fs22\cf2 );
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /* 343 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addRule(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/security-constraint/auth-constraint"\plain \f1\fs22\cf2 , \plain \f1\b\fs22\cf3 new\plain \f1\fs22\cf2  SetAuthConstraintRule());
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 345 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/security-constraint/auth-constraint/role-name"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "addAuthRole"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 347 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/security-constraint/display-name"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setDisplayName"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 349 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/security-constraint/user-data-constraint/transport-guarantee"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setUserConstraint"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /* 352 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addObjectCreate(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/security-constraint/web-resource-collection"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "org.apache.catalina.deploy.SecurityCollection"\plain \f1\fs22\cf2 );
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 354 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addSetNext(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/security-constraint/web-resource-collection"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "addCollection"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "org.apache.catalina.deploy.SecurityCollection"\plain \f1\fs22\cf2 );
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /* 357 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/security-constraint/web-resource-collection/http-method"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "addMethod"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 359 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/security-constraint/web-resource-collection/http-method-omission"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "addOmittedMethod"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 361 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/security-constraint/web-resource-collection/url-pattern"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "addPattern"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 363 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/security-constraint/web-resource-collection/web-resource-name"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setName"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /* 366 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/security-role/role-name"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "addSecurityRole"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /* 369 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addRule(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/servlet"\plain \f1\fs22\cf2 , \plain \f1\b\fs22\cf3 new\plain \f1\fs22\cf2  ServletDefCreateRule());
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 371 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addSetNext(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/servlet"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "addServlet"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "org.apache.catalina.deploy.ServletDef"\plain \f1\fs22\cf2 );
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /* 375 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/servlet/init-param"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "addInitParameter"\plain \f1\fs22\cf2 , 2);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 377 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallParam(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/servlet/init-param/param-name"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 379 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallParam(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/servlet/init-param/param-value"\plain \f1\fs22\cf2 , 1);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /* 382 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/servlet/jsp-file"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setJspFile"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 384 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/servlet/load-on-startup"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setLoadOnStartup"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 386 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/servlet/run-as/role-name"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setRunAs"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /* 389 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addObjectCreate(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/servlet/security-role-ref"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "org.apache.catalina.deploy.SecurityRoleRef"\plain \f1\fs22\cf2 );
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 391 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addSetNext(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/servlet/security-role-ref"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "addSecurityRoleRef"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "org.apache.catalina.deploy.SecurityRoleRef"\plain \f1\fs22\cf2 );
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /* 394 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/servlet/security-role-ref/role-link"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setLink"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 396 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/servlet/security-role-ref/role-name"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setName"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /* 399 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/servlet/servlet-class"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setServletClass"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 401 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/servlet/servlet-name"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setServletName"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /* 404 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addObjectCreate(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/servlet/multipart-config"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "org.apache.catalina.deploy.MultipartDef"\plain \f1\fs22\cf2 );
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 406 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addSetNext(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/servlet/multipart-config"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setMultipartDef"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "org.apache.catalina.deploy.MultipartDef"\plain \f1\fs22\cf2 );
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /* 409 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/servlet/multipart-config/location"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setLocation"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 411 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/servlet/multipart-config/max-file-size"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setMaxFileSize"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 413 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/servlet/multipart-config/max-request-size"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setMaxRequestSize"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 415 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/servlet/multipart-config/file-size-threshold"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setFileSizeThreshold"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /* 418 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/servlet/async-supported"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setAsyncSupported"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 420 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/servlet/enabled"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setEnabled"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /* 424 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addRule(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/servlet-mapping"\plain \f1\fs22\cf2 , \plain \f1\b\fs22\cf3 new\plain \f1\fs22\cf2  CallMethodMultiRule(\plain \f1\fs22\cf5 "addServletMapping"\plain \f1\fs22\cf2 , 2, 0));
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 426 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallParam(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/servlet-mapping/servlet-name"\plain \f1\fs22\cf2 , 1);
+\par \plain \f1\fs22\cf6 /* 427 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addRule(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/servlet-mapping/url-pattern"\plain \f1\fs22\cf2 , \plain \f1\b\fs22\cf3 new\plain \f1\fs22\cf2  CallParamMultiRule(0));
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 429 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addRule(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/session-config"\plain \f1\fs22\cf2 , \plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 sessionConfig\plain \f1\fs22\cf2 );
+\par \plain \f1\fs22\cf6 /* 430 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addObjectCreate(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/session-config"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "org.apache.catalina.deploy.SessionConfig"\plain \f1\fs22\cf2 );
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 432 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addSetNext(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/session-config"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setSessionConfig"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "org.apache.catalina.deploy.SessionConfig"\plain \f1\fs22\cf2 );
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 434 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/session-config/session-timeout"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setSessionTimeout"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 436 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/session-config/cookie-config/name"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setCookieName"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 438 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/session-config/cookie-config/domain"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setCookieDomain"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 440 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/session-config/cookie-config/path"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setCookiePath"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 442 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/session-config/cookie-config/comment"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setCookieComment"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 444 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/session-config/cookie-config/http-only"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setCookieHttpOnly"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 446 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/session-config/cookie-config/secure"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setCookieSecure"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 448 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/session-config/cookie-config/max-age"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "setCookieMaxAge"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 450 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/session-config/tracking-mode"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "addSessionTrackingMode"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /* 454 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addRule(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/taglib"\plain \f1\fs22\cf2 , \plain \f1\b\fs22\cf3 new\plain \f1\fs22\cf2  TaglibLocationRule(\plain \f1\b\fs22\cf3 false\plain \f1\fs22\cf2 ));
+\par \plain \f1\fs22\cf6 /* 455 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/taglib"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "addTaglib"\plain \f1\fs22\cf2 , 2);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 457 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallParam(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/taglib/taglib-location"\plain \f1\fs22\cf2 , 1);
+\par \plain \f1\fs22\cf6 /* 458 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallParam(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/taglib/taglib-uri"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /* 461 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addRule(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/jsp-config/taglib"\plain \f1\fs22\cf2 , \plain \f1\b\fs22\cf3 new\plain \f1\fs22\cf2  TaglibLocationRule(\plain \f1\b\fs22\cf3 true\plain \f1\fs22\cf2 ));
+\par \plain \f1\fs22\cf6 /* 462 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/jsp-config/taglib"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "addTaglib"\plain \f1\fs22\cf2 , 2);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 464 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallParam(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/jsp-config/taglib/taglib-location"\plain \f1\fs22\cf2 , 1);
+\par \plain \f1\fs22\cf6 /* 465 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallParam(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/jsp-config/taglib/taglib-uri"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 467 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/welcome-file-list/welcome-file"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "addWelcomeFile"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2  
+\par \plain \f1\fs22\cf6 /* 470 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallMethod(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/locale-encoding-mapping-list/locale-encoding-mapping"\plain \f1\fs22\cf2 , \plain \f1\fs22\cf5 "addLocaleEncodingMapping"\plain \f1\fs22\cf2 , 2);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 472 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallParam(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/locale-encoding-mapping-list/locale-encoding-mapping/locale"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /* 473 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallParam(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/locale-encoding-mapping-list/locale-encoding-mapping/encoding"\plain \f1\fs22\cf2 , 1);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 475 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addRule(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/post-construct"\plain \f1\fs22\cf2 , \plain \f1\b\fs22\cf3 new\plain \f1\fs22\cf2  LifecycleCallbackRule(\plain \f1\fs22\cf5 "addPostConstructMethods"\plain \f1\fs22\cf2 , 2, \plain \f1\b\fs22\cf3 true\plain \f1\fs22\cf2 ));
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 477 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallParam(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/post-construct/lifecycle-callback-class"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /* 478 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallParam(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/post-construct/lifecycle-callback-method"\plain \f1\fs22\cf2 , 1);
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 480 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addRule(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/pre-destroy"\plain \f1\fs22\cf2 , \plain \f1\b\fs22\cf3 new\plain \f1\fs22\cf2  LifecycleCallbackRule(\plain \f1\fs22\cf5 "addPreDestroyMethods"\plain \f1\fs22\cf2 , 2, \plain \f1\b\fs22\cf3 false\plain \f1\fs22\cf2 ));
+\par \plain \f1\fs22\cf6 /*     */\plain \f1\fs22\cf2      
+\par \plain \f1\fs22\cf6 /* 482 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallParam(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/pre-destroy/lifecycle-callback-class"\plain \f1\fs22\cf2 , 0);
+\par \plain \f1\fs22\cf6 /* 483 */\plain \f1\fs22\cf2      \plain \f1\fs22\cf7 digester\plain \f1\fs22\cf2 .addCallParam(\plain \f1\b\fs22\cf3 this\plain \f1\fs22\cf2 .\plain \f1\fs22\cf4 fullPrefix\plain \f1\fs22\cf2  + \plain \f1\fs22\cf5 "/pre-destroy/lifecycle-callback-method"\plain \f1\fs22\cf2 , 1);\par}

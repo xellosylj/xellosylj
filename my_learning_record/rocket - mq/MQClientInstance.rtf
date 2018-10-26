@@ -1,0 +1,31 @@
+{\rtf1\fbidis\ansi\ansicpg0\uc1\deff0\deflang0\deflangfe0{\fonttbl{\f0\fnil \'cb\'ce\'cc\'e5;}{\f1\fnil Consolas;}{\f2\fnil\fcharset134 \'cb\'ce\'cc\'e5;}}{\colortbl;\red0\green0\blue255;\red204\green120\blue50;\red169\green183\blue198;\red152\green118\blue170;\red106\green135\blue89;\red0\green0\blue0;\red43\green43\blue43;\red255\green255\blue255;}
+
+
+\pard\fi0\li0\qc\ri0\cbpat7\sb0\sa0\itap0 \plain \f2\b\lang2052\fs24\cf6 MQClientInstance
+\par \pard\fi0\li0\ql\ri0\cbpat7\sb0\sa0\itap0 
+\par 
+\par \plain \f1\fs20\cf2 this\plain \f1\fs20\cf3 .\plain \f1\fs20\cf4 clientConfig \plain \f1\fs20\cf3 = clientConfig\plain \f1\fs20\cf2 ;  producer\uc2\u29238 \'b8\'b8\u31867 \'c0\'e0\u30340 \'b5\'c4clone\uc1
+\line this\plain \f1\fs20\cf3 .\plain \f1\fs20\cf4 instanceIndex \plain \f1\fs20\cf3 = instanceIndex\plain \f1\fs20\cf2 ;
+\line this\plain \f1\fs20\cf3 .\plain \f1\fs20\cf4 nettyClientConfig \plain \f1\fs20\cf3 = \plain \f1\fs20\cf2 new \plain \f1\fs20\cf3 NettyClientConfig()\plain \f1\fs20\cf2 ;
+\line this\plain \f1\fs20\cf3 .\plain \f1\fs20\cf4 nettyClientConfig\plain \f1\fs20\cf3 .setClientCallbackExecutorThreads(clientConfig.getClientCallbackExecutorThreads())\plain \f1\fs20\cf2 ;
+\line this\plain \f1\fs20\cf3 .\plain \f1\fs20\cf4 nettyClientConfig\plain \f1\fs20\cf3 .setUseTLS(clientConfig.isUseTLS())\plain \f1\fs20\cf2 ;
+\line this\plain \f1\fs20\cf3 .\plain \f1\fs20\cf4 clientRemotingProcessor \plain \f1\fs20\cf3 = \plain \f1\fs20\cf2 new \plain \f1\fs20\cf3 ClientRemotingProcessor(\plain \f1\fs20\cf2 this\plain \f1\fs20\cf3 )\plain \f1\fs20\cf2 ;
+\line this\plain \f1\fs20\cf3 .\plain \f1\fs20\cf4 mQClientAPIImpl \plain \f1\fs20\cf3 = \plain \f1\fs20\cf2 new \plain \f1\fs20\cf3 MQClientAPIImpl(\plain \f1\fs20\cf2 this\plain \f1\fs20\cf3 .\plain \f1\fs20\cf4 nettyClientConfig\plain \f1\fs20\cf2 , this\plain \f1\fs20\cf3 .\plain \f1\fs20\cf4 clientRemotingProcessor\plain \f1\fs20\cf2 , \plain \f1\fs20\cf3 rpcHook\plain \f1\fs20\cf2 , \plain \f1\fs20\cf3 clientConfig)\plain \f1\fs20\cf2 ;
+\line 
+\line if \plain \f1\fs20\cf3 (\plain \f1\fs20\cf2 this\plain \f1\fs20\cf3 .\plain \f1\fs20\cf4 clientConfig\plain \f1\fs20\cf3 .getNamesrvAddr() != \plain \f1\fs20\cf2 null\plain \f1\fs20\cf3 ) \{
+\line     \plain \f1\fs20\cf2 this\plain \f1\fs20\cf3 .\plain \f1\fs20\cf4 mQClientAPIImpl\plain \f1\fs20\cf3 .updateNameServerAddressList(\plain \f1\fs20\cf2 this\plain \f1\fs20\cf3 .\plain \f1\fs20\cf4 clientConfig\plain \f1\fs20\cf3 .getNamesrvAddr())\plain \f1\fs20\cf2 ;
+\line     \plain \f1\fs20\cf4 log\plain \f1\fs20\cf3 .info(\plain \f1\fs20\cf5 "user specified name server address: \{\}"\plain \f1\fs20\cf2 , this\plain \f1\fs20\cf3 .\plain \f1\fs20\cf4 clientConfig\plain \f1\fs20\cf3 .getNamesrvAddr())\plain \f1\fs20\cf2 ;
+\line \plain \f1\fs20\cf3 \}
+\line 
+\line \plain \f1\fs20\cf2 this\plain \f1\fs20\cf3 .\plain \f1\fs20\cf4 clientId \plain \f1\fs20\cf3 = clientId\plain \f1\fs20\cf2 ;
+\line 
+\line this\plain \f1\fs20\cf3 .\plain \f1\fs20\cf4 mQAdminImpl \plain \f1\fs20\cf3 = \plain \f1\fs20\cf2 new \plain \f1\fs20\cf3 MQAdminImpl(\plain \f1\fs20\cf2 this\plain \f1\fs20\cf3 )\plain \f1\fs20\cf2 ;
+\line 
+\line this\plain \f1\fs20\cf3 .\plain \f1\fs20\cf4 pullMessageService \plain \f1\fs20\cf3 = \plain \f1\fs20\cf2 new \plain \f1\fs20\cf3 PullMessageService(\plain \f1\fs20\cf2 this\plain \f1\fs20\cf3 )\plain \f1\fs20\cf2 ;
+\line 
+\line this\plain \f1\fs20\cf3 .\plain \f1\fs20\cf4 rebalanceService \plain \f1\fs20\cf3 = \plain \f1\fs20\cf2 new \plain \f1\fs20\cf3 RebalanceService(\plain \f1\fs20\cf2 this\plain \f1\fs20\cf3 )\plain \f1\fs20\cf2 ;
+\line 
+\line this\plain \f1\fs20\cf3 .\plain \f1\fs20\cf4 defaultMQProducer \plain \f1\fs20\cf3 = \plain \f1\fs20\cf2 new \plain \f1\fs20\cf3 DefaultMQProducer(MixAll.\plain \f1\i\fs20\cf4 CLIENT_INNER_PRODUCER_GROUP\plain \f1\fs20\cf3 )\plain \f1\fs20\cf2 ;
+\line this\plain \f1\fs20\cf3 .\plain \f1\fs20\cf4 defaultMQProducer\plain \f1\fs20\cf3 .resetClientConfig(clientConfig)\plain \f1\fs20\cf2 ;
+\line 
+\line this\plain \f1\fs20\cf3 .\plain \f1\fs20\cf4 consumerStatsManager \plain \f1\fs20\cf3 = \plain \f1\fs20\cf2 new \plain \f1\fs20\cf3 ConsumerStatsManager(\plain \f1\fs20\cf2 this\plain \f1\fs20\cf3 .\plain \f1\fs20\cf4 scheduledExecutorService\plain \f1\fs20\cf3 )\plain \f1\fs20\cf2 ;\par}

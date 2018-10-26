@@ -1,0 +1,25 @@
+{\rtf1\fbidis\ansi\ansicpg0\uc1\deff0\deflang0\deflangfe0{\fonttbl{\f0\fnil \'cb\'ce\'cc\'e5;}{\f1\fnil\fcharset134 \'cb\'ce\'cc\'e5;}{\f2\fnil Consolas;}}{\colortbl;\red0\green0\blue255;\red169\green183\blue198;\red0\green0\blue0;\red255\green255\blue255;}
+
+
+\pard\sl360\slmult1\fi420\li0\qc\ri0\sb0\sa0\itap0 \plain \f1\b\lang2052\fs24\cf3 MapperdStatement
+\par \pard\sl360\slmult1\fi420\li0\ql\ri0\sb0\sa0\itap0 
+\par \plain \f1\lang2052\fs21 id\tab \tab     -> mappedStatmentId -> \plain \f2\fs20\cf-1 type.getName() + "." + method.getName();
+\par fetchSize\tab     -> fetchSize = options.fetchSize() > -1 || options.fetchSize() == Integer.\plain \f2\i\fs20\cf-1 MIN_VALUE \plain \f2\fs20\cf-1 ? options.fetchSize() : null;
+\par timeout \tab     -> timeout = options.timeout() > -1 ? options.timeout() : null;
+\par statementType -> statementType = StatementType.\plain \f2\i\fs20\cf-1 PREPARED\plain \f2\fs20\cf-1 ;  || statementType = options.statementType();
+\par resultSetType -> resultSetType = ResultSetType.\plain \f2\i\fs20\cf-1 FORWARD_ONLY\plain \f2\fs20\cf-1 ; || resultSetType = options.resultSetType();
+\par sqlSource     -> \uc2\u30475 \'bf\'b4MapperAnnotationBuilder\uc1
+\par cache         -> \uc2\u30475 \'bf\'b4MapperAnnotationBuilder\uc1
+\par parameterMap  -> null
+\par resultMaps    -> \uc2\u24453 \'b4\'fd\u20998 \'b7\'d6\u26512 \'ce\'f6\uc1
+\par flushCacheRequired -> \uc2\u22914 \'c8\'e7\u26524 \'b9\'fboptions\u30340 \'b5\'c4flush\u19981 \'b2\'bb\u20026 \'ce\'aa\u31354 \'bf\'d5\u65292 \'a3\'ac\u20351 \'ca\'b9\u29992 \'d3\'c3flush\u30340 \'b5\'c4\u20540 \'d6\'b5\u21542 \'b7\'f1\u21017 \'d4\'f2\u40664 \'c4\'ac\u35748 \'c8\'cf\u20026 \'ce\'aa!select\u25805 \'b2\'d9\u20316 \'d7\'f7\uc1
+\par useCache      -> \uc2\u22914 \'c8\'e7\u26524 \'b9\'fboptions\u30340 \'b5\'c4cache\u19981 \'b2\'bb\u20026 \'ce\'aa\u31354 \'bf\'d5\u65292 \'a3\'ac\u20351 \'ca\'b9\u29992 \'d3\'c3flush\u30340 \'b5\'c4\u20540 \'d6\'b5\u21542 \'b7\'f1\u21017 \'d4\'f2\u40664 \'c4\'ac\u35748 \'c8\'cf\u20026 \'ce\'aa!select\u25805 \'b2\'d9\u20316 \'d7\'f7\uc1
+\par resultOrdered -> false
+\par sqlCommandType -> \uc2\u25805 \'b2\'d9\u20316 \'d7\'f7\u31867 \'c0\'e0\u22411 \'d0\'cd\uc1
+\par keyGenerator  -> \uc2\u22914 \'c8\'e7\u26524 \'b9\'fb\u26159 \'ca\'c7insert\u25805 \'b2\'d9\u20316 \'d7\'f7\u25110 \'bb\'f2\u32773 \'d5\'dfupdate\u25805 \'b2\'d9\u20316 \'d7\'f7 -> \u20248 \'d3\'c5\u20808 \'cf\'c8selectkey\u27880 \'d7\'a2\u35299 \'bd\'e2\u65292 \'a3\'ac\u20854 \'c6\'e4\u27425 \'b4\'ceoptions\u20026 \'ce\'aa\u31354 \'bf\'d5\u20351 \'ca\'b9\u29992 \'d3\'c3configuration\u30340 \'b5\'c4\u38506 \'c5\'e3\u30528 \'d7\'c5\u65292 \'a3\'acoptions\u38750 \'b7\'c7\u31354 \'bf\'d5\u20351 \'ca\'b9\u29992 \'d3\'c3options\u30340 \'b5\'c4\u37197 \'c5\'e4\u32622 \'d6\'c3\uc1
+\par              \uc2\u20854 \'c6\'e4\u20182 \'cb\'fb\u25805 \'b2\'d9\u20316 \'d7\'f7\u31867 \'c0\'e0\u22411 \'d0\'cd\u20026 \'ce\'aaNoKeyGenerator\uc1
+\par keyProperties -> \uc2\u22914 \'c8\'e7\u26524 \'b9\'fb\u26159 \'ca\'c7insert\u25805 \'b2\'d9\u20316 \'d7\'f7\u25110 \'bb\'f2\u32773 \'d5\'dfupdate\u25805 \'b2\'d9\u20316 \'d7\'f7 -> \u20248 \'d3\'c5\u20808 \'cf\'c8selectkey\u27880 \'d7\'a2\u35299 \'bd\'e2\u65292 \'a3\'ac\u20854 \'c6\'e4\u27425 \'b4\'ceoptions\u38750 \'b7\'c7\u31354 \'bf\'d5\u20351 \'ca\'b9\u29992 \'d3\'c3options\u30340 \'b5\'c4\u37197 \'c5\'e4\u32622 \'d6\'c3\u12290 \'a1\'a3 \u40664 \'c4\'ac\u35748 \'c8\'cf\u20026 \'ce\'aaid\uc1
+\par keycolumn     -> \uc2\u27809 \'c3\'bb\u26377 \'d3\'d0selectkey\u19988 \'c7\'d2options\u38750 \'b7\'c7\u31354 \'bf\'d5 keyColumn = options.keyColumn();\uc1
+\par databaseId    -> null
+\par lang          -> XMLLanguageDriver
+\par resultSets    -> options != null ? nullOrEmpty(options.resultSets()) : null\par}
